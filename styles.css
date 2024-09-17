@@ -57,7 +57,7 @@ nav ul li a:hover {
 }
 
 .corpo {
-    margin-top: 80px;
+    margin-top: 20px;
     width: 80%;
     max-width: 1200px;
     padding: 20px; 
@@ -67,6 +67,10 @@ nav ul li a:hover {
     padding: 20px; 
     text-align: justify;
     margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -269,4 +273,156 @@ h1 {
 
 .login-form button:hover {
     background-color: #b88a2f;
+}
+
+.artista-destaque {
+    background-color: #333333;
+    
+    margin-right: -10%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+   
+}
+
+.imagem-esquerda, .imagem-direita {
+    flex: 1;
+ 
+}
+
+.conteudo-central {
+    flex: 3;
+    padding:  0 20px;
+    text-align: center;
+    color: white;
+    margin-left: -10%;
+
+}
+
+.imagem-esquerda img, .imagem-direita img {
+    width: 100%;
+    height: auto;
+}
+
+.artista-destaque h1 {
+    font-family: 'Times New Roman', Times, serif;
+    
+    color: white;
+}
+
+.artista-destaque h2 {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+
+.artista-destaque p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.75;
+    color: white;
+}
+
+.artista-destaque img {
+    width: 300px;
+    height: 300px;
+}
+
+.button-saiba-mais {
+    background-color: #d4af37;
+    padding: 15px 20px; 
+    border-radius: 25px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 37%;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.list-artist {
+    
+
+}
+
+
+.artist-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.artist {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    margin: 10px;
+    width: 80%;
+}
+
+.artist img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.artist div {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.artista-card {
+    background-color: #fff; /* Cor de fundo do cartão */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ao redor do cartão */
+    display: flex; /* Para alinhar imagem e conteúdo lado a lado */
+    margin: 20px; /* Margem externa */
+    padding: 20px; /* Espaçamento interno */
+    align-items: center; /* Alinha verticalmente os itens dentro do cartão */
+    width: 588px; /* Largura fixa conforme a imagem */
+}
+
+.artista-card img {
+    width: 300px; /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    border-radius: 8px; /* Torna a imagem redonda */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.artista-info h2 {
+    font-size: 18px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.artista-info p {
+    color: #666; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte do parágrafo */
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+button {
+    background-color: #ffcd3c; /* Cor de fundo do botão */
+    border: none; /* Sem borda */
+    border-radius: 20px; /* Bordas arredondadas do botão */
+    color: #333; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+}
+
+button:hover {
+    background-color: #e5b635; /* Cor de fundo do botão ao passar o mouse */
 }
