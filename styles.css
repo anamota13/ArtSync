@@ -383,6 +383,12 @@ h1 {
     flex-grow: 1;
 }
 
+.artistas-container {
+    display: flex; /* Permite que as cartas fiquem lado a lado */
+    justify-content: space-around; /* Distribui espaço uniformemente entre as cartas */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+}
+
 .artista-card {
     background-color: #fff; /* Cor de fundo do cartão */
     border-radius: 8px; /* Bordas arredondadas */
@@ -391,26 +397,37 @@ h1 {
     margin: 20px; /* Margem externa */
     padding: 20px; /* Espaçamento interno */
     align-items: center; /* Alinha verticalmente os itens dentro do cartão */
-    width: 588px; /* Largura fixa conforme a imagem */
+    width: 700px; /* Largura reduzida para permitir duas cartas lado a lado */
+    
 }
 
 .artista-card img {
-    width: 300px; /* Largura da imagem */
-    height: 100px; /* Altura da imagem */
-    border-radius: 8px; /* Torna a imagem redonda */
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    width: 250px; /* Largura da imagem reduzida */
+    height: 250px; /* Altura da imagem reduzida */
+    border-radius: 8px; /* Mantém a imagem redonda */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.artista-info {
+    flex: 1; /* Ocupa todo o espaço restante na div */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .artista-info h2 {
     font-size: 18px; /* Tamanho da fonte do título */
     color: #333; /* Cor do texto */
     margin-bottom: 10px; /* Espaço abaixo do título */
+    margin-right: -2px;
+    margin-left: 20px;
 }
 
 .artista-info p {
     color: #666; /* Cor do texto */
     font-size: 16px; /* Tamanho da fonte do parágrafo */
     margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+    text-align: justify; /* Justifica o texto */
+    margin-right: -2px;
+    margin-left: 20px;
 }
 
 button {
@@ -421,6 +438,7 @@ button {
     padding: 10px 20px; /* Espaçamento interno do botão */
     cursor: pointer; /* Muda o cursor para indicar clicável */
     transition: background-color 0.3s; /* Transição suave da cor de fundo */
+    margin-left: 150px;
 }
 
 button:hover {
