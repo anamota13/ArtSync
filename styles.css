@@ -20,6 +20,8 @@ body{
     width: 100%;
     object-fit: cover; 
     filter: brightness(60%);
+    filter: brightness(60%) grayscale(30%); 
+    object-fit: cover;
   }
 
   .linha-vertical {
@@ -28,11 +30,11 @@ body{
     top: 0;
     bottom: 0;
     width: 4px; 
-    height: 350px;
+    height: 80%;
     align-items: center;
     background-color: #d4af37; 
-    margin: 60px 0; 
-    margin-left: 3%;
+    margin: 4% 0; 
+    margin-left: 5%;
   }
 
   .texto-banner {
@@ -41,10 +43,21 @@ body{
     left: 10%;               
     transform: translateY(-50%);
     font-size: 30px;      
-    color: white;         
+    color: #e6e6e6;         
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;   
    
+  }
+
+  .texto-banner1 {
+    position: absolute;
+    margin-top: 20%;               
+    left: 10%;               
+    transform: translateY(-50%);
+    font-size: 30px;      
+    color: #e6e6e6;         
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold; 
   }
 
 .logo {
@@ -112,9 +125,22 @@ nav ul li a:hover {
     align-items: center;
 }
 
+.corpo h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 3%;
+    margin-right: 26%;
+}
 
+.corpo img{
+    width: 85%;
+    height: 100%;
+    margin-left: 17%;
+    margin-top: 2%;
+    
+}
 .corpo h1 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 50px;
     margin-left: 15%;
 
@@ -124,12 +150,12 @@ nav ul li a:hover {
     margin-top: 20px;
     margin-left: 160px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .corpo p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 160px;
     margin-top: 20px;
     line-height: 1.75;
