@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Sobre nós</a></li>
+            <li><a href="artistas.html">Artistas</a></li>
+            <li><a href="colecao.html">Coleção</a></li>
+            <li><a href="visitas.html">Visitas</a></li>
+            <li><a href="artemoderna.html">Arte Moderna</a></li>
+            <li><a href="login.html" class="login-button">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="corpo">
+        <p> &nbsp &nbsp &nbsp Bem-vindo à página de Agendamento de Visitas do ArtSync! Aqui, você pode organizar sua visita a museus e galerias de arte de forma rápida e prática. Nossa plataforma permite que você escolha a data e o horário mais convenientes para explorar nossas coleções, garantindo uma experiência personalizada e sem contratempos.</p>
+    </section>
+
+    <section class="visitas">
+        <div class="calendar">
+            <div class="month">
+                <button class="prev">&#10094;</button>
+                <h2 id="month-name">Agosto 2024</h2>
+                <button class="next">&#10095;</button>
+            </div>
+            <div class="weekdays">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sáb</div>
+            </div>
+            <div class="days" id="days"></div>
+        </div>
+
+        <button id="agendar-btn">AGENDAR</button>
+        <div id="mensagem"></div>
+    </section>
+
+    <script>
+        const monthNames = [
+            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        ];
+
+        let currentDate = new Date();
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
+        let selectedDay = null;
+
+        function renderCalendar() {
+            const daysContainer = document.getElementById('days');
+            const monthName = document.getElementById('month-name');
+            daysContainer.innerHTML = '';
+
+            // Primeiro dia do mês
+            const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+            // Último dia do mês
+            const lastDateOfMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            monthName.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+            // Preencher os dias vazios antes do primeiro dia do mês
+            for (let i = 0; i < firstDayOfMonth; i++) {
+                const emptyDiv = document.createElement('div');
+                daysContainer.appendChild(emptyDiv);
+            }
+
+            // Preencher os dias do mês
+            for (let i = 1; i <= lastDateOfMonth; i++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.textContent = i;
+                dayDiv.addEventListener('click', () => selectDay(i));
+                daysContainer.appendChild(dayDiv);
+            }
+        }
+
+        function selectDay(day) {
+            selectedDay = day;
+
+            // Remover a classe 'selected' de todos os dias
+            document.querySelectorAll('.days div').forEach(div => {
+                div.classList.remove('selected');
+            });
+
+            // Adicionar a classe 'selected' ao dia clicado
+            event.target.classList.add('selected');
+        }
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar();
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar();
+        });
+
+        document.getElementById('agendar-btn').addEventListener('click', () => {
+            if (selectedDay) {
+                const mensagem = `Sua visita ocorrerá dia ${selectedDay} de ${monthNames[currentMonth]} de ${currentYear}.`;
+                document.getElementById('mensagem').textContent = mensagem;
+            } else {
+                document.getElementById('mensagem').textContent = "Por favor, selecione um dia.";
+            }
+        });
+
+        renderCalendar();
+    </script>
+
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                
+                <div class="footer-col">
+                    <img src="logo.png" alt="artsync">
+                </div>
+                
+                <div class="footer-col">
+                    <h4><b>INSCREVA-SE PARA RECEBER NOSSO NEWSLETTER</b></h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>Enviar</button>
+                        </form>
+                    </div>
+                <div class="contact-section">
+                        <p><i class="fa fa-clock"></i> Das 08:00 às 21:00</p>
+                        <p><i class="fa fa-phone"></i> +55 16 99344-2527</p>
+                </div>
+
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:contato@na.na"><i class="fas fa-envelope"></i></a>
+                    </div>
+
+                </div>
+                <!--end footer col-->
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

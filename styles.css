@@ -556,3 +556,103 @@ button:hover {
     margin-left: 0%;
     font-weight: bold;
   }
+
+  .visitas {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    margin-top: -7%;
+}
+
+.calendar {
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #d4af37;
+    color: rgb(5, 5, 5);
+}
+
+.month button {
+    background-color: transparent;
+    border: none;
+    color: rgb(4, 4, 4);
+    font-size: 20px;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 0%;
+}
+
+.weekdays {
+    display: flex;
+    background-color: #d4af37;
+    color: white;
+    padding: 10px 0;
+}
+
+.weekdays div {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.days div.selected {
+    background-color: #d4af37;
+    color: white;
+    border-radius: 50%;
+}
+
+.days div:hover {
+    background-color: #d4af37;
+    color: white;
+    border-radius: 50%;
+}
+
+#agendar-btn {
+    padding: 10px 20px;
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+    margin-left: 0%;
+    color: #000000;
+}
+
+#mensagem {
+    margin-top: 20px;
+    font-size: 18px;
+}
