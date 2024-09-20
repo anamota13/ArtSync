@@ -512,3 +512,47 @@ button:hover {
         width: 100%;
     }
 }
+
+.colecao img {
+    width: 700px;
+    height: 450px;
+    margin-top: 5%;
+}
+
+.linha-vertical2 {
+    position: absolute;
+    left: 30px; 
+    top: 0;
+    bottom: 0;
+    width: 4px; 
+    height: 50%;
+    align-items: center;
+    background-color: #d4af37; 
+    margin: 13% 0; 
+    margin-left: 48%;
+  }
+
+  .texto-banner2 {
+    position: absolute;
+    top: 50%;               
+    left: 52%;               
+    transform: translateY(-50%);
+    font-size: 50px;      
+    color: #000000;         
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;   
+   
+  }
+
+  .texto-banner2 p {
+    margin-top: 3%;
+    font-size: 30px;
+
+  }
+
+  .texto-banner2 button {
+    margin-top: 10%;
+    width: 70%;
+    margin-left: 0%;
+    font-weight: bold;
+  }
