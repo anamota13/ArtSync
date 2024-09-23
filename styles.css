@@ -437,66 +437,66 @@ h1 {
 }
 
 .artistas-container {
-    display: flex; /* Permite que as cartas fiquem lado a lado */
-    justify-content: space-around; /* Distribui espaço uniformemente entre as cartas */
-    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap;
 }
 
 .artista-card {
-    background-color: #fff; /* Cor de fundo do cartão */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ao redor do cartão */
-    display: flex; /* Para alinhar imagem e conteúdo lado a lado */
-    margin: 20px; /* Margem externa */
-    padding: 20px; /* Espaçamento interno */
-    align-items: center; /* Alinha verticalmente os itens dentro do cartão */
-    width: 700px; /* Largura reduzida para permitir duas cartas lado a lado */
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    display: flex; 
+    margin: 20px;
+    padding: 20px;
+    align-items: center; 
+    width: 700px; 
     
 }
 
 .artista-card img {
-    width: 250px; /* Largura da imagem reduzida */
-    height: 250px; /* Altura da imagem reduzida */
-    border-radius: 8px; /* Mantém a imagem redonda */
-    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    width: 250px; 
+    height: 250px; 
+    border-radius: 8px; 
+    margin-right: 10px; 
 }
 
 .artista-info {
-    flex: 1; /* Ocupa todo o espaço restante na div */
-    text-align: left; /* Alinha o texto à esquerda */
+    flex: 1; 
+    text-align: left; 
 }
 
 .artista-info h2 {
-    font-size: 18px; /* Tamanho da fonte do título */
-    color: #333; /* Cor do texto */
-    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-size: 18px; 
+    color: #333; 
+    margin-bottom: 10px; 
     margin-right: -2px;
     margin-left: 20px;
 }
 
 .artista-info p {
-    color: #666; /* Cor do texto */
-    font-size: 16px; /* Tamanho da fonte do parágrafo */
-    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
-    text-align: justify; /* Justifica o texto */
+    color: #666; 
+    font-size: 16px; 
+    margin-bottom: 20px; 
+    text-align: justify; 
     margin-right: -2px;
     margin-left: 20px;
 }
 
 button {
-    background-color: #e5b635; /* Cor de fundo do botão */
-    border: none; /* Sem borda */
-    border-radius: 20px; /* Bordas arredondadas do botão */
-    color: #333; /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    cursor: pointer; /* Muda o cursor para indicar clicável */
-    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+    background-color: #e5b635; 
+    border: none; 
+    border-radius: 20px; 
+    color: #333; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
     margin-left: 150px;
 
 }
 
 button:hover {
-    background-color: #e5b635; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #e5b635; 
 }
 
 
@@ -529,13 +529,13 @@ button:hover {
     align-items: center;
     background-color: #d4af37; 
     margin: 13% 0; 
-    margin-left: 48%;
+    margin-left: 51%;
   }
 
   .texto-banner2 {
     position: absolute;
-    top: 50%;               
-    left: 52%;               
+    top: 53%;               
+    left: 55%;               
     transform: translateY(-50%);
     font-size: 50px;      
     color: #000000;         
