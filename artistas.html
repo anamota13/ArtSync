@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,100 +8,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Sobre nós</a></li>
-            <li><a href="artistas.html">Artistas</a></li>
-            <li><a href="colecao.html">Coleção</a></li>
-            <li><a href="visitas.html">Visitas</a></li>
-            <li><a href="artemoderna.html">Arte Moderna</a></li>
-            <li><a href="login.html" class="login-button">Login</a></li>
-        </ul>
-    </nav>
-    <section class="corpo">
-        <h1><center>PRINCIPAIS ARTISTAS</center></h1>
-        
-        <div class="artista-destaque">
-            <div class="imagem-esquerda">
-                <img src="/ArtSync/img/tarsila.png" alt="Tarsila do Amaral">
-            </div>
-            <div class="conteudo-central">
-            <h2>Tarsila do Amaral (1886 - 1973)</h2>
-            <p>Artista Destaque</p>
-            <p>Foi uma pioneira do modernismo brasileiro e uma das mais influentes pintoras do país. 
-                Com obras icônicas como "Abaporu" (ilustração ao lado) e "A Negra", ela combinou 
-                elementos da cultura brasileira cominfluências europeias, 
-                criando uma estética única que redefiniu a arte nacional.</p>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo ArtSync">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre nós</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li><a href="colecao.html">Coleção</a></li>
+                <li><a href="visitas.html">Visitas</a></li>
+                <li><a href="artemoderna.html">Arte Moderna</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
+        
+    <section class="artista-destaque">
+        <div class="imagem-esquerda">
+            <img src="/ArtSync/img/tarsila.png" alt="Tarsila do Amaral">
+        </div>
+        <div class="conteudo-central">
+            <h2>Tarsila do Amaral (1886 - 1973)</h2>
+            <p class="titulo-destaque">Artista Destaque</p>
+            <p>Foi uma pioneira do modernismo brasileiro e uma das mais influentes pintoras do país. 
+                Com obras icônicas como "Abaporu" e "A Negra", ela combinou 
+                elementos da cultura brasileira com influências europeias, 
+                criando uma estética única que redefiniu a arte nacional.</p>
             <div class="button-saiba-mais">
                 <a href="https://www.tarsiladoamaral.com.br/">Saiba mais</a>
             </div>
-            </div>
-            <div class="imagem-direita">
-                <img src="/ArtSync/img/abaporu1.png" alt="Abaporu">0
-            </div>
         </div>
-
-        <div class="artistas-container">
-            <div class="artista-card"> 
-                <img src="/ArtSync/img/romero.png" alt="Romero Britto">
-                <div class="artista-info">
-                    <h2>Romero Britto (1963)</h2>
-                    <p>Artista brasileiro contemporâneo, famoso por suas obras coloridas que combinam elementos do pop art e do cubismo. Suas criações são conhecidas por suas formas geométricas e padrões vibrantes.</p>
-                    <button>Saiba Mais</button>
-                </div>
-            </div>
-
-            <div class="artista-card"> 
-                <img src="/ArtSync/img/anita.png" alt="Anita Malfatti">
-                <div class="artista-info">
-                    <h2>Anita Malfatti (1889 - 1964)</h2>
-                    <p>Foi uma artista brasileira pioneira do modernismo, conhecida por sua abordagem expressionista e suas contribuições significativas para a arte moderna no Brasil.</p>
-                    <button>Saiba Mais</button>
-                </div>
-            </div>
+        <div class="imagem-direita">
+            <img src="/ArtSync/img/abaporu1.png" alt="Abaporu">
         </div>
-        
-        <div class="artista-card"> 
-                <img src="/ArtSync/img/candido.png" alt="Cândido Portinari">
-                <div class="artista-info">
-                    <h2>Cândido Portinari (1903-1962)</h2>
-                    <p>Renomado pintor brasileiro, famoso por suas obras que retratam a vida e a cultura brasileira 
-                        com um estilo único, utilizando cores vibrantes e temas sociais e políticos.</p>
-                    <button>Saiba Mais</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="artista-card"> 
-            <img src="/ArtSync/img/calvacanti.png" alt="Di Calvacanti">
-            <div class="artista-info">
-                <h2>Di Cavalcanti (1897-1976)</h2>
-                <p>Conhecido por suas pinturas que exploram a vida urbana e o cotidiano do Brasil,
-                     utilizando um estilo expressionista e uma paleta de cores vivas para capturar a essência da sociedade carioca.</p>
-                <button>Saiba Mais</button>
-            </div>
-        </div>
-    </div>
-
-
-
     </section>
+
+    
+    <section class="corpo">
+        <h1>PRINCIPAIS ARTISTAS</h1>
+        <div class="grid-container">
+            <div class="container">
+                <img src="img/romero.png" alt="Descrição da Imagem">
+                <div class="text">
+                    <h2>Romero Britto</h2>
+                    <p>(1963)</p>
+                    <p>Artista brasileiro contemporâneo, famoso por suas obras coloridas que combinam elementos do pop art e do cubismo. Suas criações são conhecidas por suas formas geométricas e padrões vibrantes.</p>
+                    <div class="button-saiba-mais-card">
+                        <a href="#"><b>Saiba mais</b></a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container">
+                <img src="img/anita.png" alt="Descrição da Imagem">
+                <div class="text">
+                    <h2>Anita Malfatti</h2>
+                    <p> (1889 - 1964)</p>
+                    <p>Foi uma artista brasileira pioneira do modernismo, conhecida por sua abordagem expressionista e suas contribuições significativas para a arte moderna no Brasil.
+                        Anita Malfatti expôs seus trabalhos, totalizando 20 telas
+                    </p>
+                    <div class="button-saiba-mais-card">
+                        <a href="#"><b>Saiba mais</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
     <footer>
         <div class="container-footer">
             <div class="row-footer">
                 <div class="footer-col">
-                    <img src="logo.png" alt="artsync">
+                    <img src="logo.png" alt="Logo ArtSync">
                 </div>
                 <div class="footer-col">
                     <h4><b>INSCREVA-SE PARA RECEBER NOSSO NEWSLETTER</b></h4>
                     <div class="form-sub">
                         <form>
                             <input type="email" placeholder="Digite o seu e-mail" required>
-                            <button>Enviar</button>
+                            <button type="submit">Enviar</button>
                         </form>
                     </div>
                     <div class="contact-section">
@@ -109,13 +99,12 @@
                         <p><i class="fa fa-phone"></i> +55 16 99344-2527</p>
                     </div>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:contato@na.na"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:contato@na.na" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
