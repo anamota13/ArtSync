@@ -540,27 +540,36 @@ h1 {
 /* Tela Coleção */
 
 .colecao img {
-    width: 700px;
-    height: 450px;
+    width: 115vh;
+    height: 70vh;
     margin-top: 5%;
 }
 
-.button-colecao{
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
-    background-color: #d4af37;
-    color: #333;
-    border-radius: 10px;
+.button-colecao {
+    background-color: #b59428; 
+    color: #1a1919; 
+    padding: 10px 20px; 
     border: none; 
-    transition: background-color 0.3s;
-        }
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.button-colecao:hover {
+    background-color: #b59428; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.button-colecao:active {
+    transform: scale(0.95); /* Efeito de compressão ao clicar */
+}
+
 
 .linha-vertical2 {
     position: absolute;
     left: 30px; 
-    top: 0;
+    top: 7%;
     bottom: 0;
     width: 4px; 
     height: 50%;
@@ -572,11 +581,11 @@ h1 {
 
   .texto-banner2 {
     position: absolute;
-    top: 53%;               
+    top: 60%;               
     left: 55%;               
     transform: translateY(-50%);
     font-size: 50px;      
-    color: #000000;         
+    color: #1a1919;         
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;   
    
@@ -585,6 +594,7 @@ h1 {
   .texto-banner2 p {
     margin-top: 3%;
     font-size: 30px;
+    font-style: italic;
 
   }
 
