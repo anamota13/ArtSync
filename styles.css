@@ -557,8 +557,8 @@ h1 {
 }
 
 .button-colecao:hover {
-    background-color: #b59428; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    background-color: #b59428; 
+    transform: scale(1.05); 
 }
 
 .button-colecao:active {
