@@ -136,6 +136,7 @@ nav ul li a.login-button:hover {
     text-align: justify;
     padding: 20px;
     box-sizing: border-box;
+    
 }
 
 /* Títulos */
@@ -146,13 +147,13 @@ nav ul li a.login-button:hover {
 /* H1 */
 .corpo h1 {
     text-align: center;
-    margin-left: 15%;
+    margin-left: 20%;
 }
 
 /* H2 */
 .corpo h2 {
     margin-top: 20px;
-    margin-left: 160px;
+    margin-left: 20%;
     font-size: 17px;
 }
 
@@ -166,7 +167,7 @@ nav ul li a.login-button:hover {
 /* Parágrafos */
 .corpo p {
     font-size: 16px;
-    margin-left: 160px;
+    margin-left: 20%;
     margin-top: 20px;
     line-height: 1.75;
 }
@@ -714,6 +715,36 @@ h1 {
     filter: brightness(60%) grayscale(30%); 
     object-fit: cover;
   }
+
+  .corpo h4{
+    margin-left: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 1%;
+
+  }
+
+  .corpo h3{
+    margin-left: 20%;
+  }
+
+  .corpo li{
+    margin-left: 25%;
+    
+  }
+
+  .corpo img {
+    align-items: center;
+    width: 50%;
+    margin-left: 33%;
+    border-radius: 5px;
+    transition: transform 0.2s ease; /* Adiciona uma transição suave */
+}
+
+    .corpo img:hover {
+        transform: scale(1.1); /* Aplica o efeito de zoom ao passar o mouse */
+    }
+
 
   .linha-vertical {
     position: absolute;
