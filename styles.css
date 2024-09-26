@@ -27,7 +27,7 @@ body{
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* Efeito de zoom */
+    transform: scale(1.1); 
 }
 
 /* Estilos para telas menores */
@@ -49,6 +49,12 @@ body{
 
 
 /* Menu das páginas: Alteração na NAV para o modelo responsivo */
+
+nav {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px; /* Espaço entre o nav e a seção */
+}
 
 nav ul {
     list-style-type: none;
@@ -298,6 +304,14 @@ h1 {
 /* Tela Artistas */
 /* Artista Destaque */
 
+
+.art-dest img {
+    width: 50%;
+    height: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .artista-destaque {
     display: flex;
     align-items: center;
@@ -309,12 +323,14 @@ h1 {
     max-width: 1250px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 5%;
+    position: relative; 
+    z-index: 1;
 }
 
 .linha-vertical3 {
     position: absolute;
-    left: 7px; 
-    top: 0;
+    left: 3vh; 
+    top: 3%;
     bottom: 0;
     width: 4px; 
     height: 50%;
@@ -326,45 +342,76 @@ h1 {
 
   .texto-banner3 {
     position: absolute;
-    top: 53%;               
+    top: 60%;               
     left: 52%;  
     right: 5%;             
     transform: translateY(-50%);
-    font-size: 30px;      
-    color: #000000;         
+    font-size: 28px;      
+    color: #1a1919;         
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;   
-   
-  }
+}
 
-  .texto-banner3 p {
+.texto-banner3 p {
     margin-top: 3%;
-    font-size: 15px;
-
-  }
-
-.artista-destaque img {
-    max-width: 60%;
-    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #1a1919; 
+    text-align: justify;
+    font-weight: normal;
 }
 
 .conteudo-central {
     max-width: 500px;
 }
 
-.button-saiba-mais a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #d4af37;
-    border-radius: 25px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s;
+.button-saiba-mais-tarsila{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;
 }
 
-.button-saiba-mais a:hover {
-    background-color: #b88a2f;
-    color: #fff;
+.button-saiba-mais-tarsila a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #d4af37; 
+    color: #1a1919; 
+    text-decoration: none; 
+    border-radius: 25px; 
+    font-size: 17px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: auto; 
+}
+
+.button-saiba-mais-tarsila a:hover {
+    background-color: #d4af37; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 12px rgba(71, 71, 71, 0.3); 
+}
+
+.button-saiba-mais-tarsila a:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+}
+
+@media (max-width: 768px) {
+    .artista-destaque {
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 10%;
+    }
+    
+    .art-dest img {
+        width: 100%;
+        height: auto;
+    }
+
+    .linha-vertical3 {
+        display: none;
+    }
 }
 
 
@@ -650,31 +697,6 @@ h1 {
     font-size: 18px;
 }
 
-.art-dest img {
-    width: 700px;
-    height: 450px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.button-colecao3{
-    width: 100%;
-    height: 50%;
-    margin-top: 10%;
-    margin-left:  0%;
-    margin-right: 5%;
-    padding: 10px;
-    text-align: center;
-    background-color: #d4af37;
-    color: #1a1919;
-    border-radius: 10px;
-    font-size: 13px;
-    border: none; 
-    font-weight: bold;
-    transition: background-color 0.3s;
-        }
-
-
 /* Tela Arte Moderna */
 
 .banner {
@@ -695,7 +717,7 @@ h1 {
 
   .linha-vertical {
     position: absolute;
-    left: 30px; 
+    left: 5vh; 
     top: 0;
     bottom: 0;
     width: 4px; 
