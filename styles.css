@@ -303,6 +303,16 @@ h1 {
 
 /*Tela de Cadastro */
 
+.cadastro-container {
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 35%;
+    margin-top: -2%;
+}
+
 .register-prompt {
     text-align: center;
     margin-top: 15px;
