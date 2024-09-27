@@ -301,6 +301,24 @@ h1 {
     background-color: #b88a2f;
 }
 
+/*Tela de Cadastro */
+
+.register-prompt {
+    text-align: center;
+    margin-top: 15px;
+    color: #333;
+    font-size: 14px;
+}
+
+.register-prompt a {
+    color: #d4af37; /* Cor que combina com o botão */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-prompt a:hover {
+    text-decoration: underline; /* Efeito de hover no link */
+}
 
 /* Tela Artistas */
 /* Artista Destaque */
