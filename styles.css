@@ -335,7 +335,7 @@ h1 {
 
 
 .art-dest img {
-    width: 50%;
+    width: 45%;
     height: 25%;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -359,20 +359,20 @@ h1 {
 .linha-vertical3 {
     position: absolute;
     left: 3vh; 
-    top: 3%;
+    top: 5%;
     bottom: 0;
     width: 4px; 
-    height: 50%;
+    height: 60%;
     align-items: center;
     background-color: #d4af37; 
-    margin: 13% 0; 
-    margin-left: 49%;
+    margin: 12% 0; 
+    margin-left: 45%;
   }
 
   .texto-banner3 {
     position: absolute;
     top: 60%;               
-    left: 52%;  
+    left: 50%;  
     right: 5%;             
     transform: translateY(-50%);
     font-size: 45px;      
@@ -575,7 +575,7 @@ h1 {
 
 .linha-vertical2 {
     position: absolute;
-    left: 30px; 
+    left: 7%; 
     top: 7%;
     bottom: 0;
     width: 4px; 
@@ -589,7 +589,7 @@ h1 {
   .texto-banner2 {
     position: absolute;
     top: 60%;               
-    left: 55%;               
+    left: 60%;               
     transform: translateY(-50%);
     font-size: 45px;      
     color: #1a1919;         
