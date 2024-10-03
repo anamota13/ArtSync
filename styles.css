@@ -354,10 +354,10 @@ h1 {
 }
 
 .art-dest img {
-    width: 115%; /* A imagem se ajusta ao tamanho do contêiner */
-    height: 70vh; /* Mantém a proporção da imagem */
+    width: 120%; /* A imagem se ajusta ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
     margin-top: 5%;
-    margin-left:-18%;
+    margin-left: -15%;
 }
 
 .linha-vertical3 {
@@ -379,6 +379,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin-left: 8%;
+    margin-top: 5%;
 }
 
 .texto-banner3 p {
@@ -448,7 +449,7 @@ h1 {
 }
 
 .principais-artistas {
-    margin-top: -5%; /* Reduz a margem superior da seção */
+    margin-top: 2%; /* Reduz a margem superior da seção */
 }
 
 .container {
@@ -562,7 +563,7 @@ h1 {
 
 .colecao img {
     width: 115%; /* A imagem se ajusta ao tamanho do contêiner */
-    height: 70vh; /* Mantém a proporção da imagem */
+    height: 60vh; /* Mantém a proporção da imagem */
     margin-top: 5%;
     margin-left:-18%;
 }
@@ -586,6 +587,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;   
     margin-left: 8%; /* Espaço entre a imagem e o texto */
+    margin-top: 5%;
 }
 
 .texto-banner2 p {
