@@ -334,69 +334,65 @@ h1 {
 /* Artista Destaque */
 
 
-.art-dest img {
-    width: 45%;
-    height: 25%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.artistas-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.artista-destaque {
+.artistas-section {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 1250px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-wrap: wrap; /* Para garantir que o layout seja responsivo */
+}
+
+.art-dest {
+    flex: 1;
+    min-width: 300px;
+}
+
+.art-dest img {
+    width: 115%; /* A imagem se ajusta ao tamanho do contêiner */
+    height: 70vh; /* Mantém a proporção da imagem */
     margin-top: 5%;
-    position: relative; 
-    z-index: 1;
+    margin-left:-18%;
 }
 
 .linha-vertical3 {
     position: absolute;
-    left: 3vh; 
-    top: 5%;
+    left: 50%;
+    top: 13%;
     bottom: 0;
-    width: 4px; 
-    height: 60%;
-    align-items: center;
-    background-color: #d4af37; 
-    margin: 12% 0; 
-    margin-left: 45%;
-  }
+    width: 4px;
+    height: 80%;
+    background-color: #d4af37;
+    margin-left: -2%;
+}
 
-  .texto-banner3 {
-    position: absolute;
-    top: 60%;               
-    left: 50%;  
-    right: 5%;             
-    transform: translateY(-50%);
-    font-size: 45px;      
-    color: #1a1919;         
-    font-family: Arial, Helvetica, sans-serif; 
-    font-weight: bold;   
+.texto-banner3 {
+    flex: 1;
+    text-align: left;
+    font-size: 45px;
+    color: #1a1919;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 8%;
 }
 
 .texto-banner3 p {
     margin-top: 3%;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
-    color: #1a1919; 
+    font-style: italic;
     text-align: justify;
     font-weight: normal;
+    
 }
 
-.conteudo-central {
-    max-width: 500px;
-}
-
-.button-saiba-mais-tarsila{
-    display: flex; 
-    justify-content: center; 
+.button-saiba-mais-tarsila {
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin: 20px auto;
 }
@@ -404,45 +400,40 @@ h1 {
 .button-saiba-mais-tarsila a {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #d4af37; 
-    color: #1a1919; 
-    text-decoration: none; 
-    border-radius: 25px; 
-    font-size: 17px; 
-    font-weight: bold; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    width: auto; 
+    background-color: #d4af37;
+    color: #1a1919;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button-saiba-mais-tarsila a:hover {
-    background-color: #d4af37; 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 12px rgba(71, 71, 71, 0.3); 
+    background-color: #b59428;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(71, 71, 71, 0.3);
 }
 
 .button-saiba-mais-tarsila a:active {
-    transform: translateY(1px); 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
-    .artista-destaque {
-        flex-direction: column;
-        padding: 15px;
-        margin-top: 10%;
+    .texto-banner3 {
+        font-size: 30px;
     }
-    
-    .art-dest img {
-        width: 100%;
-        height: auto;
+
+    .texto-banner3 p {
+        font-size: 20px;
     }
 
     .linha-vertical3 {
         display: none;
     }
 }
-
 
 /* Principais Artistas */
 
@@ -480,6 +471,10 @@ h1 {
 .container img {
     max-width: 100%;
     border-radius: 10px;
+}
+
+.principais-artistas h1 {
+    margin-top: 7%; /* Ajuste o valor conforme necessário */
 }
 
 
@@ -546,71 +541,100 @@ h1 {
 
 /* Tela Coleção */
 
+.colecao-wrapper {
+    max-width: 1200px; /* Largura máxima da div */
+    margin: 0 auto; /* Centraliza a div */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.colecao-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha */
+}
+
+.colecao {
+    flex: 1; /* Faz a imagem ocupar o espaço disponível */
+    min-width: 300px; /* Largura mínima para a imagem */
+}
+
 .colecao img {
-    width: 115vh;
-    height: 70vh;
+    width: 115%; /* A imagem se ajusta ao tamanho do contêiner */
+    height: 70vh; /* Mantém a proporção da imagem */
     margin-top: 5%;
+    margin-left:-18%;
 }
-
-.button-colecao {
-    background-color: #b59428; 
-    color: #1a1919; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-}
-
-.button-colecao:hover {
-    background-color: #b59428; 
-    transform: scale(1.05); 
-}
-
-.button-colecao:active {
-    transform: scale(0.95); /* Efeito de compressão ao clicar */
-}
-
 
 .linha-vertical2 {
     position: absolute;
-    left: 7%; 
-    top: 7%;
+    left: 50%; /* Centraliza a linha vertical */
+    top: 13%;
     bottom: 0;
     width: 4px; 
-    height: 50%;
-    align-items: center;
+    height: 80%;
     background-color: #d4af37; 
-    margin: 13% 0; 
-    margin-left: 51%;
-  }
+    margin-left: -2%; /* Para centralizar a linha */
+}
 
-  .texto-banner2 {
-    position: absolute;
-    top: 60%;               
-    left: 60%;               
-    transform: translateY(-50%);
+.texto-banner2 {
+    flex: 1; /* Faz o texto ocupar o espaço disponível */
+    text-align: left; /* Mantém o texto alinhado à esquerda */
     font-size: 45px;      
     color: #1a1919;         
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;   
-   
-  }
+    margin-left: 8%; /* Espaço entre a imagem e o texto */
+}
 
-  .texto-banner2 p {
+.texto-banner2 p {
     margin-top: 3%;
     font-size: 30px;
     font-style: italic;
+}
 
-  }
+.texto-banner2 button {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background-color: #d4af37; 
+    color: #1a1919; 
+    text-decoration: none; 
+    border-radius: 25px; 
+    font-size: 17px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: none; /* Removendo a borda */
+}
 
-  .texto-banner2 button {
-    margin-top: 10%;
-    width: 70%;
-    margin-left: 0%;
-    font-weight: bold;
-  }
+.texto-banner2 button:hover {
+    background-color: #b59428; /* Alterando a cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho do botão ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(71, 71, 71, 0.3); /* Sombra mais forte */
+}
+
+.texto-banner2 button:active {
+    transform: scale(0.95); /* Reduz o tamanho ao clicar */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao clicar */
+}
+
+@media (max-width: 768px) {
+    .texto-banner2 {
+        font-size: 30px; /* Tamanho da fonte em telas menores */
+    }
+
+    .texto-banner2 p {
+        font-size: 20px; /* Tamanho do texto do parágrafo em telas menores */
+    }
+
+    .linha-vertical2 {
+        display: none; /* Esconde a linha vertical em telas menores se necessário */
+    }
+}
 
   /* Tela Visitas */
 
@@ -1006,14 +1030,5 @@ h1 {
     .footer-col .social-icons a i {
         font-size: 16px; 
     }
-
-    /* Ajustes para o mapa em telas pequenas */
-    .maps {
-        margin-left: 0; 
-        margin-top: 20px; 
-        width: 100%; 
-        height: auto; 
-    }
-
     
 }
