@@ -805,7 +805,7 @@ h1 {
   .texto-banner {
     position: absolute;
     top: 50%;               
-    left: 10%;               
+    left: 12%;               
     transform: translateY(-50%);
     font-size: 30px;      
     color: #e6e6e6;         
