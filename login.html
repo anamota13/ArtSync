@@ -6,6 +6,13 @@
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // Função que será chamada quando o formulário for enviado
+        function handleLogin(event) {
+            event.preventDefault(); // Prevenir o envio do formulário
+            window.location.href = "index.html"; // Redireciona para a página index.html
+        }
+    </script>
 </head>
 <body>
     <div class="logo">
@@ -13,7 +20,7 @@
     </div>  
     <div class="login-container">
         <h1>Login</h1>
-        <form class="login-form" id="loginForm" action="login_action.php" method="post"> <!-- Certifique-se de que a ação está correta -->
+        <form class="login-form" id="loginForm" onsubmit="handleLogin(event)"> <!-- Aqui utilizamos o JS para o redirecionamento -->
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
             <label for="password">Senha</label>
