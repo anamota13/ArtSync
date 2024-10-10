@@ -597,7 +597,7 @@ h1 {
     width: 115%; /* A imagem se ajusta ao tamanho do contêiner */
     height: 60vh; /* Mantém a proporção da imagem */
     margin-top: 5%;
-    margin-left:-18%;
+    margin-left: -18%;
 }
 
 .linha-vertical2 {
@@ -669,6 +669,87 @@ h1 {
         display: none; /* Esconde a linha vertical em telas menores se necessário */
     }
 }
+
+/* Formulário da Tela Cadastrar Nova Obra: Cadastro de Obras */
+
+.collection-container {
+    background-color: #e6e6e6; /* Mesma cor de fundo */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Largura total */
+    max-width: 600px; /* Largura máxima aumentada */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    margin-bottom: 8%;
+    margin-top: 4%;
+    
+}
+
+.collection-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.collection-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.collection-form button {
+    padding: 10px;
+    background-color: #d4af37;
+    border: none;
+    border-radius: 10px;
+    color: #f2f2f2;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.collection-form button:hover {
+    background-color: #b88a2f;
+}
+
+/* Botão "Cadastrar Nova Obra" */
+
+.novo-obra-btn {
+    text-align: center; /* Centraliza o botão */
+    margin-top: 10%; /* Margem superior */
+    
+}
+
+.novo-obra-btn .button {
+    background-color: #b59428; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove bordas */
+    border-radius: 25px; /* Arredondar cantos */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+    display: inline-block; /* Permite definir a largura e altura */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+/* Estilo para hover */
+.novo-obra-btn .button:hover {
+    background-color: #b59428c9; /* Cor de fundo ao passar o mouse */
+}
+
+/* Remove qualquer borda e margem padrão do botão */
+.novo-obra-btn .button:focus {
+    outline: none; /* Remove o contorno do botão ao focar */
+}
+
 
   /* Tela Visitas */
 
