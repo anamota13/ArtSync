@@ -361,7 +361,6 @@ h1 {
 }
 
 
-
 /* Tela Artistas */
 /* Artista Destaque */
 
@@ -670,6 +669,72 @@ h1 {
     }
 }
 
+/* Ajustando o local das obras */
+
+/* Estilizando a lista de obras */
+.obras-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Layout responsivo, 1 a 3 colunas */
+    gap: 30px; /* Espaçamento entre as obras */
+    margin: 30px 0;
+}
+
+/* Estilo para cada obra */
+.obra-item {
+    display: flex;
+    flex-direction: column; /* Empilha imagem e texto em telas pequenas */
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.3s ease;
+}
+
+.obra-item:hover {
+    transform: translateY(-10px); /* Efeito de elevação no hover */
+}
+
+/* Imagem da obra */
+.obra-imagem {
+    width: 100%;
+    height: 60%;
+    object-fit: cover; /* Mantém o aspecto da imagem */
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Informações da obra */
+.obra-info {
+    text-align: left;
+}
+
+.obra-titulo {
+    font-size: 1.5rem;
+    color: #b59428; /* Cor dourada */
+    margin-bottom: 10px;
+}
+
+.obra-artista, .obra-ano, .obra-descricao {
+    font-size: 1rem;
+    color: #1a1919;
+    margin-bottom: 8px;
+}
+
+.obra-artista strong, .obra-ano strong {
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .obras-list {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .obra-imagem {
+        height: 200px;
+    }
+}
+
 /* Formulário da Tela Cadastrar Nova Obra: Cadastro de Obras */
 
 .collection-container {
@@ -723,12 +788,12 @@ h1 {
 
 .novo-obra-btn {
     text-align: center; /* Centraliza o botão */
-    margin-top: 10%; /* Margem superior */
-    
+    margin-top: -6%; /* Margem superior */
+    margin-right: 42%;
 }
 
 .novo-obra-btn .button {
-    background-color: #b59428; /* Cor de fundo */
+    background-color: #b59428; /* Cor de fundo vermelha */
     color: white; /* Cor do texto */
     padding: 10px 20px; /* Espaçamento interno */
     border: none; /* Remove bordas */
@@ -738,11 +803,12 @@ h1 {
     transition: background-color 0.3s ease; /* Transição suave para hover */
     display: inline-block; /* Permite definir a largura e altura */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-top: 15%;
 }
 
 /* Estilo para hover */
 .novo-obra-btn .button:hover {
-    background-color: #b59428c9; /* Cor de fundo ao passar o mouse */
+    background-color: #b59428c0; /* Cor de fundo ao passar o mouse (vermelho mais suave) */
 }
 
 /* Remove qualquer borda e margem padrão do botão */

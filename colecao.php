@@ -1,3 +1,7 @@
+<?php
+session_start(); // Inicia a sessão
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +16,21 @@
         <img src="logo.png" alt="Logo">
     </div>
     <nav>
-        <ul>
-            <li><a href="index.html" class="link">Sobre nós</a></li>
-            <li><a href="artistas.html" class="link">Artistas</a></li>
-            <li><a href="colecao.php" class="link">Coleção</a></li>
-            <li><a href="visitas.html" class="link">Visitas</a></li>
-            <li><a href="artemoderna.html" class="link">Arte Moderna</a></li>
+    <ul>
+        <li><a href="index.html" class="link">Sobre nós</a></li>
+        <li><a href="artistas.html" class="link">Artistas</a></li>
+        <li><a href="colecao.php" class="link">Coleção</a></li>
+        <li><a href="visitas.html" class="link">Visitas</a></li>
+        <li><a href="artemoderna.html" class="link">Arte Moderna</a></li>
+        <?php if (isset($_SESSION['nome_usuario'])): ?>
+            <li class="user-greeting">Olá, <?php echo htmlspecialchars($_SESSION['nome_usuario']); ?>!</li>
+            <li><a href="logout.php" class="logout-button">Logout</a></li>
+        <?php else: ?>
             <li><a href="login.html" class="login-button">Login</a></li>
-        </ul>
-    </nav>
+        <?php endif; ?>
+    </ul>
+</nav>
+
     
     <div class="colecao-wrapper">
         <section class="colecao-section">
@@ -37,14 +47,16 @@
     
     <section class="corpo">
         <p>A coleção da Galerie Belle Époque reúne obras de arte que vão desde o abstrato ao expressionismo. Com uma curadoria cuidadosa, apresentamos peças que desafiam as normas e convidam à reflexão. Descubra nossa vasta coleção de arte moderna, onde cada peça desafia as convenções e abre novas possibilidades de expressão.</p>
+        
+        <!-- Exibe o botão apenas se o usuário for admin -->
         <div class="novo-obra-btn">
-    <a href="cadastrar_obra.html" class="button">Cadastrar Nova Obra</a>
-</div>
-
+            <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin'): ?>
+                <a href="cadastrar_obra.html" class="button">✚ Cadastrar Nova Obra</a>
+            <?php endif; ?>
+        </div>
     </section>
     
     <div class="collection-container"> 
-        <h2>Obras Cadastradas:</h2>
         <div class="obras-list">
             <?php
             // Conectar ao banco de dados
@@ -62,13 +74,15 @@
             if ($result->num_rows > 0) {
                 // Exibir as obras
                 while($row = $result->fetch_assoc()) {
-                    echo "<div class='obra'>";
-                    echo "<h3>" . $row['titulo'] . "</h3>";
-                    echo "<p>Artista: " . $row['artista'] . "</p>";
-                    echo "<p>Ano: " . $row['ano'] . "</p>";
-                    echo "<p>Descrição: " . $row['descricao'] . "</p>";
-                    echo "<img src='img_obras/" . $row['imagem'] . "' alt='" . $row['titulo'] . "' style='max-width: 200px;'>";
-                    echo "</div>";
+                    echo "<div class='obra-item'>";
+                    echo "<img src='img_obras/" . htmlspecialchars($row['imagem']) . "' alt='" . htmlspecialchars($row['titulo']) . "' class='obra-imagem'>";
+                    echo "<div class='obra-info'>";
+                    echo "<h3 class='obra-titulo'>" . htmlspecialchars($row['titulo']) . "</h3>";
+                    echo "<p class='obra-artista'><strong>Artista:</strong> " . htmlspecialchars($row['artista']) . "</p>";
+                    echo "<p class='obra-ano'><strong>Ano:</strong> " . htmlspecialchars($row['ano']) . "</p>";
+                    echo "<p class='obra-descricao'>" . htmlspecialchars($row['descricao']) . "</p>";
+                    echo "</div>"; // Fim da obra-info
+                    echo "</div>"; // Fim da obra-item
                 }
             } else {
                 echo "<p>Nenhuma obra cadastrada.</p>";

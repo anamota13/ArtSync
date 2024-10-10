@@ -29,8 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verifica a senha
         if (password_verify($senha, $row['senha'])) {
-            // Login bem-sucedido
-            header("Location: index.html"); // Redireciona para index.html
+            // Login bem-sucedido, armazena o nome de usuário e o tipo de usuário na sessão
+            $_SESSION['nome_usuario'] = $row['nome_usuario']; // Armazenando o nome do usuário
+            $_SESSION['tipo'] = $row['tipo']; // Armazenando o tipo de usuário
+            header("Location: colecao.php"); // Redireciona para colecao.php
             exit(); // Termina a execução do script
         } else {
             // Adiciona mensagem de erro como parâmetro de URL
