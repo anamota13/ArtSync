@@ -304,31 +304,63 @@ h1 {
 /*Tela de Cadastro */
 
 .cadastro-container {
-    background-color: #e6e6e6;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    margin-left: 35%;
-    margin-top: -2%;
+    background-color: #e6e6e6; /* Cor de fundo do container */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 100%; /* Largura total do container */
+    max-width: 400px; /* Largura máxima do container */
+    margin-left: 35%; /* Centralização horizontal */
+    margin-top: -5%; /* Pequeno deslocamento para cima */
 }
 
 .register-prompt {
-    text-align: center;
-    margin-top: 15px;
-    color: #333;
-    font-size: 14px;
+    text-align: center; /* Alinhamento do texto no centro */
+    margin-top: 15px; /* Margem acima do prompt */
+    color: #333; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
 }
 
 .register-prompt a {
     color: #d4af37; /* Cor que combina com o botão */
-    text-decoration: none;
-    font-weight: bold;
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: bold; /* Deixa o texto em negrito */
 }
 
 .register-prompt a:hover {
     text-decoration: underline; /* Efeito de hover no link */
 }
+
+.select-container {
+    margin-top: 15px; /* Espaçamento superior */
+}
+
+.select-container label {
+    display: block; /* Faz o rótulo ocupar a largura total */
+    margin-bottom: 5px; /* Espaçamento inferior do rótulo */
+    color: #333; /* Cor do texto do rótulo */
+    font-size: 14px; /* Tamanho da fonte do rótulo */
+    
+}
+
+.select-container select {
+    width: 100%; /* Largura total da caixa de seleção */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    background-color: #fff; /* Fundo branco */
+    font-size: 14px; /* Tamanho da fonte do texto */
+    color: #333333; /* Cor do texto */
+    appearance: none; /* Remove a aparência padrão do navegador */
+    /* Se você quiser adicionar uma imagem de seta personalizada, pode usar o seguinte código: */
+    /* background-image: url('data:image/png;base64,...'); */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: right 10px center; /* Alinha a seta à direita */
+    background-size: 12px; /* Tamanho da seta */
+    margin-bottom: 2%;
+    font-style: italic;
+}
+
+
 
 /* Tela Artistas */
 /* Artista Destaque */
