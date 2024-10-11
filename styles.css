@@ -303,7 +303,6 @@ h1 {
 
 /* Logout */
 
-/* Estilo do menu suspenso para o usuário */
 .user-menu {
     position: relative;
     display: inline-block;
@@ -870,11 +869,9 @@ h1 {
 /* Botão de Excluir Obra */
 
 /* Botão de Excluir */
+/* Botão de Excluir */
 .btn-excluir {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #dc3545; 
+    background-color: #dc3545; /* Vermelho */
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -886,7 +883,7 @@ h1 {
 }
 
 .btn-excluir:hover {
-    background-color: #c82333; 
+    background-color: #c82333; /* Vermelho Escuro */
 }
 
 

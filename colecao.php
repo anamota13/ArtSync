@@ -76,6 +76,12 @@ session_start(); // Inicia a sessão
                     echo "<p class='obra-artista'><strong>Artista:</strong> " . htmlspecialchars($row['artista']) . "</p>";
                     echo "<p class='obra-ano'><strong>Ano:</strong> " . htmlspecialchars($row['ano']) . "</p>";
                     echo "<p class='obra-descricao'>" . htmlspecialchars($row['descricao']) . "</p>";
+                   
+                    // Adicionar botão de excluir para administradores
+                    if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
+                    echo "<a href='excluir_obra.php?id=" . $row['id'] . "' class='btn-excluir' onclick=\"return confirm('Tem certeza que deseja excluir esta obra?');\">Excluir</a>";
+                    }
+                   
                     echo "</div>"; // Fim da obra-info
                     echo "</div>"; // Fim da obra-item
                 }
