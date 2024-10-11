@@ -9,7 +9,7 @@
             <li class="user-menu">
                 <span class="user-name" onclick="toggleMenu()">Olá, <?php echo htmlspecialchars($_SESSION['nome_usuario']); ?> <i class="arrow-down"></i></span>
                 <div id="dropdown" class="dropdown-content">
-                    <a href="logout.php">Sair</a>
+                <a href="logout.php">Sair</a>
                 </div>
             </li>
         <?php else: ?>
