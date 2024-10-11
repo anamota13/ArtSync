@@ -1,9 +1,15 @@
+<?php
+session_start(); // Inicia a sessão
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Nova Obra</title>
+    <title>Coleção</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -11,16 +17,15 @@
     <div class="logo">
         <img src="logo.png" alt="Logo">
     </div>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="link">Sobre nós</a></li>
-            <li><a href="artistas.html" class="link">Artistas</a></li>
-            <li><a href="colecao.php" class="link">Coleção</a></li>
-            <li><a href="visitas.html" class="link">Visitas</a></li>
-            <li><a href="artemoderna.html" class="link">Arte Moderna</a></li>
-            <li><a href="login.html" class="login-button">Login</a></li>
-        </ul>
-    </nav>
+    <?php
+    include('header.php'); // Inclui o cabeçalho
+    ?>
+
+<!-- Carregando o arquivo JavaScript -->
+<script src="scripts.js"></script>
+
+
+
     
     <div class="collection-container">
         <h1>Cadastrar Nova Obra</h1>

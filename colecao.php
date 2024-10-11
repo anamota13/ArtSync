@@ -1,6 +1,8 @@
 <?php
 session_start(); // Inicia a sessão
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,21 +17,14 @@ session_start(); // Inicia a sessão
     <div class="logo">
         <img src="logo.png" alt="Logo">
     </div>
-    <nav>
-    <ul>
-        <li><a href="index.html" class="link">Sobre nós</a></li>
-        <li><a href="artistas.html" class="link">Artistas</a></li>
-        <li><a href="colecao.php" class="link">Coleção</a></li>
-        <li><a href="visitas.html" class="link">Visitas</a></li>
-        <li><a href="artemoderna.html" class="link">Arte Moderna</a></li>
-        <?php if (isset($_SESSION['nome_usuario'])): ?>
-            <li class="user-greeting">Olá, <?php echo htmlspecialchars($_SESSION['nome_usuario']); ?>!</li>
-            <li><a href="logout.php" class="logout-button">Logout</a></li>
-        <?php else: ?>
-            <li><a href="login.html" class="login-button">Login</a></li>
-        <?php endif; ?>
-    </ul>
-</nav>
+    <?php
+    include('header.php'); // Inclui o cabeçalho
+    ?>
+
+<!-- Carregando o arquivo JavaScript -->
+<script src="scripts.js"></script>
+
+
 
     
     <div class="colecao-wrapper">
@@ -51,7 +46,7 @@ session_start(); // Inicia a sessão
         <!-- Botão de Cadastrar Nova Obra para Admin -->
         <div class="novo-obra-btn">
             <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin'): ?>
-                <a href="cadastrar_obra.html" class="button">✚ Cadastrar Nova Obra</a>
+                <a href="cadastrar_obra.php" class="button">✚ Cadastrar Nova Obra</a>
             <?php endif; ?>
         </div>
     </section>
