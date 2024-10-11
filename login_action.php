@@ -11,7 +11,6 @@ if ($conn->connect_error) {
 
 // Verifica se o método de requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebe os dados do formulário
     $email = $_POST['email'];
     $senha = $_POST['password'];
 
@@ -24,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica se o usuário foi encontrado
     if ($result->num_rows > 0) {
-        // Recupera os dados do usuário
         $row = $result->fetch_assoc();
         
         // Verifica a senha
@@ -33,19 +31,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['nome_usuario'] = $row['nome_usuario']; // Armazenando o nome do usuário
             $_SESSION['tipo'] = $row['tipo']; // Armazenando o tipo de usuário
             header("Location: colecao.php"); // Redireciona para colecao.php
-            exit(); // Termina a execução do script
+            exit(); 
         } else {
-            // Adiciona mensagem de erro como parâmetro de URL
             header("Location: login.html?error=senha_incorreta"); // Redireciona para login.html
-            exit(); // Termina a execução do script
+            exit(); 
         }
     } else {
-        // Adiciona mensagem de erro como parâmetro de URL
         header("Location: login.html?error=usuario_nao_encontrado"); // Redireciona para login.html
-        exit(); // Termina a execução do script
+        exit(); 
     }
 
-    // Fecha a declaração
+
     $stmt->close();
 }
 

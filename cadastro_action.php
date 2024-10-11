@@ -11,7 +11,6 @@ if ($conn->connect_error) {
 
 // Verifica se o método de requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebe os dados do formulário
     $nome_usuario = $_POST['nome_usuario'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];

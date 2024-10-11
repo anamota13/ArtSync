@@ -304,58 +304,56 @@ h1 {
 /*Tela de Cadastro */
 
 .cadastro-container {
-    background-color: #e6e6e6; /* Cor de fundo do container */
+    background-color: #e6e6e6; 
     padding: 10px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 8px; 
     width: 100%; /* Largura total do container */
     max-width: 400px; /* Largura máxima do container */
-    margin-left: 35%; /* Centralização horizontal */
+    margin-left: 35%; 
     margin-top: -5%; /* Pequeno deslocamento para cima */
 }
 
 .register-prompt {
-    text-align: center; /* Alinhamento do texto no centro */
-    margin-top: 15px; /* Margem acima do prompt */
-    color: #333; /* Cor do texto */
-    font-size: 14px; /* Tamanho da fonte */
+    text-align: center; 
+    margin-top: 15px; 
+    color: #333; 
+    font-size: 14px; 
 }
 
 .register-prompt a {
-    color: #d4af37; /* Cor que combina com o botão */
-    text-decoration: none; /* Remove sublinhado padrão */
-    font-weight: bold; /* Deixa o texto em negrito */
+    color: #d4af37; 
+    text-decoration: none; 
+    font-weight: bold; 
 }
 
 .register-prompt a:hover {
-    text-decoration: underline; /* Efeito de hover no link */
+    text-decoration: underline; 
 }
 
 .select-container {
-    margin-top: 15px; /* Espaçamento superior */
+    margin-top: 15px; 
 }
 
 .select-container label {
-    display: block; /* Faz o rótulo ocupar a largura total */
-    margin-bottom: 5px; /* Espaçamento inferior do rótulo */
-    color: #333; /* Cor do texto do rótulo */
-    font-size: 14px; /* Tamanho da fonte do rótulo */
+    display: block; 
+    margin-bottom: 5px; 
+    color: #333; 
+    font-size: 14px; 
     
 }
 
 .select-container select {
-    width: 100%; /* Largura total da caixa de seleção */
+    width: 100%; 
     padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 8px; /* Bordas levemente arredondadas */
-    background-color: #fff; /* Fundo branco */
-    font-size: 14px; /* Tamanho da fonte do texto */
-    color: #333333; /* Cor do texto */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    font-size: 14px; 
+    color: #333333; 
     appearance: none; /* Remove a aparência padrão do navegador */
-    /* Se você quiser adicionar uma imagem de seta personalizada, pode usar o seguinte código: */
-    /* background-image: url('data:image/png;base64,...'); */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    background-position: right 10px center; /* Alinha a seta à direita */
-    background-size: 12px; /* Tamanho da seta */
+    background-repeat: no-repeat; 
+    background-position: right 10px center; 
+    background-size: 12px; 
     margin-bottom: 2%;
     font-style: italic;
 }
@@ -683,15 +681,15 @@ h1 {
 .obra-item {
     display: flex;
     flex-direction: column; /* Empilha imagem e texto em telas pequenas */
-    background-color: #ffffff; /* Fundo branco */
+    background-color: #ffffff; 
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease;
 }
 
 .obra-item:hover {
-    transform: translateY(-10px); /* Efeito de elevação no hover */
+    transform: translateY(-10px); 
 }
 
 /* Imagem da obra */
@@ -815,6 +813,29 @@ h1 {
 .novo-obra-btn .button:focus {
     outline: none; /* Remove o contorno do botão ao focar */
 }
+
+/* Botão de Excluir Obra */
+
+/* Botão de Excluir */
+.btn-excluir {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #dc3545; 
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-excluir:hover {
+    background-color: #c82333; 
+}
+
 
 
   /* Tela Visitas */
