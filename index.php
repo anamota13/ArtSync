@@ -21,7 +21,7 @@ session_start(); // Inicia a sessão
     include('header.php'); // Inclui o cabeçalho
     ?>
 
-<!-- Carregando o arquivo JavaScript -->
+
 <script src="scripts.js"></script>
 
 
