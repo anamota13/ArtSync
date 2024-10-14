@@ -259,6 +259,10 @@ nav ul li a.login-button:hover {
     width: 90%; 
     max-width: 400px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
@@ -358,12 +362,14 @@ h1 {
 
 .cadastro-container {
     background-color: #e6e6e6; 
-    padding: 10px; /* Espaçamento interno */
+    padding: 10px; 
     border-radius: 8px; 
-    width: 100%; /* Largura total do container */
-    max-width: 400px; /* Largura máxima do container */
-    margin-left: 35%; 
-    margin-top: -5%; /* Pequeno deslocamento para cima */
+    width: 100%; 
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .register-prompt {
