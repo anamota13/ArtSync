@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: cadastro.html"); 
         exit();
     }
-
+    
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
 
