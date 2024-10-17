@@ -1,14 +1,22 @@
 <?php
 session_start();
 
-// Verifica se o usuário está logado
+
 $isLoggedIn = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
 
-// Exemplo de horários já reservados (normalmente você buscaria esses dados em um banco de dados)
-$reservations = [
-    '2024-08-15' => ['10:00', '14:00'], // Datas com horários reservados
-    '2024-08-16' => ['09:00'],
-];
+
+include('db.php');
+
+
+$reservations = [];
+try {
+    $stmt = $pdo->query("SELECT `data`, `horario` FROM reservas");
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $reservations[$row['data']][] = $row['horario'];
+    }
+} catch (PDOException $e) {
+    error_log("Erro ao buscar reservas: " . $e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,15 +28,22 @@ $reservations = [
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        .reserved {
-            background-color: #d3d3d3; /* Cor cinza claro para horários reservados */
-            cursor: not-allowed;
+        .reserved { background-color: #d3d3d3; cursor: not-allowed; }
+        .available { cursor: pointer; }
+        .available:hover { background-color: #f0f0f0; }
+        .selected { background-color: #c0e0ff; }
+        
+        #horarios {
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+            max-height: 0; 
+            opacity: 0; 
+            overflow: hidden; 
+    
         }
-        .available {
-            cursor: pointer;
-        }
-        .available:hover {
-            background-color: #f0f0f0; /* Efeito hover para horários disponíveis */
+
+        #horarios.show {
+            max-height: 500px; 
+            opacity: 1; 
         }
     </style>
 </head>
@@ -36,14 +51,14 @@ $reservations = [
     <div class="logo">
         <img src="logo.png" alt="Logo">
     </div>
-    
+
     <?php include('header.php'); ?>
 
-<script src="scripts.js"></script>
+<section class="corpo">
+<p>&nbsp &nbsp &nbsp Bem-vindo! Aqui, você pode agendar sua visita às nossas exposições. Escolha um dia no calendário e selecione um horário disponível. Horários reservados estarão destacados em cinza. <br> 
+&nbsp &nbsp &nbsp &nbspEstamos ansiosos para recebê-lo! Lembre-se de que é necessário estar logado para agendar sua visita.</p>
+</section>
 
-    <section class="corpo">
-        <p>&nbsp;&nbsp;&nbsp; Bem-vindo à página de Agendamento de Visitas do ArtSync! Aqui, você pode organizar sua visita a museus e galerias de arte de forma rápida e prática. Nossa plataforma permite que você escolha a data e o horário mais convenientes para explorar nossas coleções, garantindo uma experiência personalizada e sem contratempos.</p>
-    </section>
 
     <section class="visitas">
         <div class="calendar">
@@ -53,18 +68,12 @@ $reservations = [
                 <button class="next">&#10095;</button>
             </div>
             <div class="weekdays">
-                <div>Dom</div>
-                <div>Seg</div>
-                <div>Ter</div>
-                <div>Qua</div>
-                <div>Qui</div>
-                <div>Sex</div>
-                <div>Sáb</div>
+                <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
             </div>
             <div class="days" id="days"></div>
         </div>
 
-        <div id="horarios" style="display:none;">
+        <div id="horarios">
             <h3>Horários disponíveis:</h3>
             <div id="horarios-container"></div>
         </div>
@@ -74,18 +83,15 @@ $reservations = [
     </section>
 
     <script>
-        const monthNames = [
-            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-        ];
-
+        const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
         let currentDate = new Date();
         let currentMonth = currentDate.getMonth();
         let currentYear = currentDate.getFullYear();
         let selectedDay = null;
+        let selectedTime = null;
 
-        const reservedTimes = <?php echo json_encode($reservations); ?>; // Horários reservados
-        const isLoggedIn = <?php echo $isLoggedIn ? 'true' : 'false'; ?>;
+        const reservedTimes = <?php echo json_encode($reservations); ?>;
+        const isLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
 
         function renderCalendar() {
             const daysContainer = document.getElementById('days');
@@ -97,30 +103,21 @@ $reservations = [
 
             monthName.textContent = `${monthNames[currentMonth]} ${currentYear}`;
 
-            // Preencher os dias vazios antes do primeiro dia do mês
             for (let i = 0; i < firstDayOfMonth; i++) {
-                const emptyDiv = document.createElement('div');
-                daysContainer.appendChild(emptyDiv);
+                daysContainer.appendChild(document.createElement('div'));
             }
 
-            // Preencher os dias do mês
             for (let i = 1; i <= lastDateOfMonth; i++) {
                 const dayDiv = document.createElement('div');
                 dayDiv.textContent = i;
-                dayDiv.addEventListener('click', () => selectDay(i));
+                dayDiv.addEventListener('click', (event) => selectDay(event, i));
                 daysContainer.appendChild(dayDiv);
             }
         }
 
-        function selectDay(day) {
+        function selectDay(event, day) {
             selectedDay = day;
-
-            // Remover a classe 'selected' de todos os dias
-            document.querySelectorAll('.days div').forEach(div => {
-                div.classList.remove('selected');
-            });
-
-            // Adicionar a classe 'selected' ao dia clicado
+            document.querySelectorAll('.days div').forEach(div => div.classList.remove('selected'));
             event.target.classList.add('selected');
             loadAvailableTimes(day);
         }
@@ -128,57 +125,72 @@ $reservations = [
         function loadAvailableTimes(day) {
             const selectedDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
             const horariosContainer = document.getElementById('horarios-container');
-            horariosContainer.innerHTML = ''; // Limpa horários anteriores
-            document.getElementById('horarios').style.display = 'block';
+            horariosContainer.innerHTML = '';
+            const horariosDiv = document.getElementById('horarios');
+            horariosDiv.classList.add('show'); // Adiciona a classe para mostrar
 
-            const availableTimes = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00']; // Horários disponíveis
+            const availableTimes = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00'];
 
             availableTimes.forEach(time => {
                 const timeDiv = document.createElement('div');
                 timeDiv.textContent = time;
+
                 if (reservedTimes[selectedDate] && reservedTimes[selectedDate].includes(time)) {
                     timeDiv.classList.add('reserved');
-                    timeDiv.title = 'Horário já reservado'; // Tooltip para horários reservados
+                    timeDiv.title = 'Horário já reservado';
                 } else {
                     timeDiv.classList.add('available');
-                    timeDiv.addEventListener('click', () => selectTime(time));
+                    timeDiv.addEventListener('click', (event) => selectTime(event, time));
                 }
                 horariosContainer.appendChild(timeDiv);
             });
         }
 
-        function selectTime(time) {
-            // Aqui você pode adicionar a lógica para agendar o horário selecionado
-            const mensagem = `Sua visita está agendada para o dia ${selectedDay} de ${monthNames[currentMonth]} de ${currentYear}, às ${time}.`;
-            document.getElementById('mensagem').textContent = mensagem;
+        function selectTime(event, time) {
+            selectedTime = time;
+            document.querySelectorAll('#horarios-container div').forEach(div => div.classList.remove('selected'));
+            event.target.classList.add('selected');
         }
 
         document.querySelector('.prev').addEventListener('click', () => {
             currentMonth--;
-            if (currentMonth < 0) {
-                currentMonth = 11;
-                currentYear--;
-            }
+            if (currentMonth < 0) { currentMonth = 11; currentYear--; }
             renderCalendar();
         });
 
         document.querySelector('.next').addEventListener('click', () => {
             currentMonth++;
-            if (currentMonth > 11) {
-                currentMonth = 0;
-                currentYear++;
-            }
+            if (currentMonth > 11) { currentMonth = 0; currentYear++; }
             renderCalendar();
         });
 
         document.getElementById('agendar-btn').addEventListener('click', () => {
-            if (!isLoggedIn) {
-                document.getElementById('mensagem').textContent = "Verifique se está logado na plataforma.";
-                return; // Impede o código de continuar se o usuário não estiver logado
+            if (!selectedDay || !selectedTime) {
+                document.getElementById('mensagem').textContent = "Por favor, selecione um dia e um horário.";
+                return;
             }
 
-            if (!selectedDay) {
-                document.getElementById('mensagem').textContent = "Por favor, selecione um dia.";
+            if (isLoggedIn) {
+                const selectedDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`;
+                fetch('agendar_action.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `data=${encodeURIComponent(selectedDate)}&horario=${encodeURIComponent(selectedTime)}`,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('mensagem').textContent = data.success;
+                    } else {
+                        document.getElementById('mensagem').textContent = data.error;
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    document.getElementById('mensagem').textContent = "Erro ao enviar a solicitação.";
+                });
+            } else {
+                document.getElementById('mensagem').textContent = "Você precisa estar logado para agendar.";
             }
         });
 
