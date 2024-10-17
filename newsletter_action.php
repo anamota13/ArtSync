@@ -32,9 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
             $mail->isHTML(true);
             $mail->Subject = 'Obrigado por se inscrever no nosso newsletter';
             $mail->Body    = '
-                <h3 style="color: #333;">🎉 Bem-vindo(a) ao ArtSync! 🎨</h3>
+                <h3 style="color: #333;">🎉 Bem-vindo(a) ao ArtSync! 🎉</h3>
                 <p style="color: #666;">Estamos super felizes por ter você com a gente! Sua inscrição em nossa newsletter foi confirmada 
-                e você agora faz parte de uma comunidade apaixonada por arte e criatividade. 💫</p>
+                e você agora faz parte de uma comunidade apaixonada por Arte Moderna. 💫</p>
 
                 <p style="color: #666;">Fique ligado(a) para receber as últimas novidades diretamente em sua caixa de entrada. 🎁</p>
 
