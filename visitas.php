@@ -197,12 +197,13 @@ $reservations = [
                     <div class="form-sub">
                         <form id="newsletter-form" action="newsletter_action.php" method="POST">
                             <input type="email" name="email" placeholder="Digite o seu e-mail" required>
+                            <input type="hidden" name="redirect_page" value="<?php echo basename($_SERVER['PHP_SELF']); ?>"> 
                             <button type="submit">Enviar</button>
                         </form>
                     </div>                    
                     <div class="contact-section">
                         <p><i class="fa fa-clock"></i> Das 08:00 às 21:00</p>
-                        <p><i class="fa fa-phone"></i> +55 16 99344-2527</p>
+                        <p><i class="fa fa-phone"></i> +55 16 99297-1607</p>
                     </div>
     
                     <div class="social-icons">
