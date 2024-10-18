@@ -91,7 +91,7 @@ session_start(); // Inicia a sessão
                 echo "<p>Nenhuma obra cadastrada.</p>";
             }
 
-            // Fechar a conexão
+            
             $conn->close();
             ?>
         </div>

@@ -1,5 +1,5 @@
 <?php
-session_start(); // Inicia a sessão
+session_start(); 
 
 ?>
 
@@ -18,7 +18,7 @@ session_start(); // Inicia a sessão
         <img src="logo.png" alt="Logo">
     </div>
     <?php
-    include('header.php'); // Inclui o cabeçalho
+    include('header.php'); 
     ?>
 
 

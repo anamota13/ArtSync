@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     <?php include('header.php'); ?>
 
-    <div class="collection-container"> <!-- Classe de contêiner -->
+    <div class="collection-container"> 
         <h1>Editar Obra</h1>
         <form class="collection-form" action="" method="post" enctype="multipart/form-data">
             <label for="titulo">Título da Obra</label>
