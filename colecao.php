@@ -18,10 +18,10 @@ session_start(); // Inicia a sessão
         <img src="logo.png" alt="Logo">
     </div>
     <?php
-    include('header.php'); // Inclui o cabeçalho
+    include('header.php'); 
     ?>
 
-<!-- Carregando o arquivo JavaScript -->
+
 <script src="scripts.js"></script>
 
 
@@ -43,7 +43,7 @@ session_start(); // Inicia a sessão
     <section class="corpo">
         <p>A coleção da Galerie Belle Époque reúne obras de arte que vão desde o abstrato ao expressionismo. Com uma curadoria cuidadosa, apresentamos peças que desafiam as normas e convidam à reflexão. Descubra nossa vasta coleção de arte moderna, onde cada peça desafia as convenções e abre novas possibilidades de expressão.</p>
         
-        <!-- Botão de Cadastrar Nova Obra para Admin -->
+        
         <div class="novo-obra-btn">
             <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin'): ?>
                 <a href="cadastrar_obra.php" class="button">✚ Cadastrar Nova Obra</a>
@@ -54,20 +54,19 @@ session_start(); // Inicia a sessão
     <div class="collection-container"> 
         <div class="obras-list">
             <?php
-            // Conectar ao banco de dados
+           
             $conn = new mysqli('localhost', 'root', '', 'artsync_pi');
 
-            // Verifica a conexão
+            
             if ($conn->connect_error) {
                 die("Conexão falhou: " . $conn->connect_error);
             }
 
-            // Consultar as obras cadastradas
+            
             $sql = "SELECT * FROM obras"; 
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                // Exibir as obras
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='obra-item'>";
                     echo "<img src='img_obras/" . htmlspecialchars($row['imagem']) . "' alt='" . htmlspecialchars($row['titulo']) . "' class='obra-imagem'>";
@@ -77,13 +76,16 @@ session_start(); // Inicia a sessão
                     echo "<p class='obra-ano'><strong>Ano:</strong> " . htmlspecialchars($row['ano']) . "</p>";
                     echo "<p class='obra-descricao'>" . htmlspecialchars($row['descricao']) . "</p>";
                    
-                    // Adicionar botão de excluir para administradores
+                   
                     if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
                     echo "<a href='excluir_obra.php?id=" . $row['id'] . "' class='btn-excluir' onclick=\"return confirm('Tem certeza que deseja excluir esta obra?');\">Excluir</a>";
-                    }
+                    echo "<a href='editar_obra.php?id=" . $row['id'] . "' class='btn-editar'>Editar</a>";
+                }
+
+                    
                    
-                    echo "</div>"; // Fim da obra-info
-                    echo "</div>"; // Fim da obra-item
+                    echo "</div>"; 
+                    echo "</div>"; 
                 }
             } else {
                 echo "<p>Nenhuma obra cadastrada.</p>";

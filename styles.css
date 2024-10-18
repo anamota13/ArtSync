@@ -892,6 +892,24 @@ h1 {
     background-color: #c82333; 
 }
 
+.btn-editar {
+    background-color: #007bff; 
+    color: white;
+    padding:  5px 10px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none; 
+    display: inline-block; 
+    margin-left: 2%;
+    transition: background-color 0.3s ease; 
+}
+
+.btn-editar:hover {
+    background-color: #0056b3; 
+}
+
+
+
 
 
   /* Tela Visitas */
