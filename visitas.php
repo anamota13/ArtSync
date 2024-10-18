@@ -27,25 +27,6 @@ try {
     <title>Agendar Visitas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        .reserved { background-color: #d3d3d3; cursor: not-allowed; }
-        .available { cursor: pointer; }
-        .available:hover { background-color: #f0f0f0; }
-        .selected { background-color: #c0e0ff; }
-        
-        #horarios {
-            transition: max-height 0.4s ease, opacity 0.4s ease;
-            max-height: 0; 
-            opacity: 0; 
-            overflow: hidden; 
-    
-        }
-
-        #horarios.show {
-            max-height: 500px; 
-            opacity: 1; 
-        }
-    </style>
 </head>
 <body>
     <div class="logo">
@@ -53,6 +34,7 @@ try {
     </div>
 
     <?php include('header.php'); ?>
+<script src="scripts.js"></script>
 
 <section class="corpo">
 <p>&nbsp &nbsp &nbsp Bem-vindo! Aqui, você pode agendar sua visita às nossas exposições. Escolha um dia no calendário e selecione um horário disponível. Horários reservados estarão destacados em cinza. <br> 
@@ -60,7 +42,7 @@ try {
 </section>
 
 
-    <section class="visitas">
+<section class="visitas">
         <div class="calendar">
             <div class="month">
                 <button class="prev">&#10094;</button>
@@ -77,10 +59,13 @@ try {
             <h3>Horários disponíveis:</h3>
             <div id="horarios-container"></div>
         </div>
-
+        
         <button id="agendar-btn">AGENDAR</button>
         <div id="mensagem"></div>
+
+        
     </section>
+    
 
     <script>
         const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];

@@ -669,8 +669,8 @@ h1 {
 }
 
 .texto-banner2 {
-    flex: 1; /* Faz o texto ocupar o espaço disponível */
-    text-align: left; /* Mantém o texto alinhado à esquerda */
+    flex: 1; 
+    text-align: left; 
     font-size: 45px;      
     color: #1a1919;         
     font-family: Arial, Helvetica, sans-serif; 
@@ -732,7 +732,7 @@ h1 {
 /* Estilizando a lista de obras */
 .obras-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Layout responsivo, 1 a 3 colunas */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
     gap: 30px; /* Espaçamento entre as obras */
     margin: 30px 0;
 }
@@ -845,22 +845,22 @@ h1 {
 /* Botão "Cadastrar Nova Obra" */
 
 .novo-obra-btn {
-    text-align: center; /* Centraliza o botão */
-    margin-top: -6%; /* Margem superior */
+    text-align: center; 
+    margin-top: -6%; 
     margin-right: 42%;
 }
 
 .novo-obra-btn .button {
-    background-color: #b59428; /* Cor de fundo vermelha */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: none; /* Remove bordas */
-    border-radius: 25px; /* Arredondar cantos */
-    text-decoration: none; /* Remove sublinhado */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: background-color 0.3s ease; /* Transição suave para hover */
-    display: inline-block; /* Permite definir a largura e altura */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    background-color: #b59428; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 25px; 
+    text-decoration: none; 
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+    display: inline-block; 
+    cursor: pointer; 
     margin-top: 15%;
 }
 
@@ -907,9 +907,6 @@ h1 {
 .btn-editar:hover {
     background-color: #0056b3; 
 }
-
-
-
 
 
   /* Tela Visitas */
@@ -1013,11 +1010,63 @@ h1 {
     
 }
 
-
 #mensagem {
     margin-top: 20%;
     font-size: 18px;
 }
+
+/* Estilo para a lista de horários */
+#horarios {
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    max-height: 0;                    
+    opacity: 0;                       
+    margin-bottom: 20px;               
+    padding: 10px;                    
+    font-family: Arial, sans-serif;    
+    text-align: center;                
+    border: 1px solid #ddd;            
+    border-radius: 8px;                
+    width: 350px;                      
+}
+
+#horarios.show {
+    max-height: 500px;                 
+    opacity: 1;                        
+    margin-bottom: 20px;               
+}
+
+#horarios ul {
+    padding: 0;                       
+    margin: 0;                         
+}
+
+#horarios li {
+    list-style: none;                  
+    margin: 10px 0;                   
+    font-size: 18px;                   
+    color: #333;                       
+    white-space: nowrap;               
+}
+
+/* Estilos para botões e horários */
+
+.reserved {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.available {
+    cursor: pointer;
+}
+
+.available:hover {
+    background-color: #f0f0f0;
+}
+
+.selected {
+    background-color: #c0e0ff;
+}
+
 
 /* Tela Arte Moderna */
 
@@ -1108,7 +1157,7 @@ h1 {
   footer {
     background-color: #e6e6e6;
     padding: 50px 0;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 .container-footer {
