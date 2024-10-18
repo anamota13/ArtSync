@@ -116,7 +116,7 @@ session_start(); // Inicia a sessão
                         </form>
                     </div>                    
                     <div class="contact-section">
-                        <p><i class="fa fa-clock"></i> Das 08:00 às 21:00</p>
+                        <p><i class="fa fa-clock"></i> Das 08:00 às 18:00</p>
                         <p><i class="fa fa-phone"></i> +55 16 99297-1607</p>
                     </div>
     

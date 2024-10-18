@@ -980,7 +980,7 @@ h1 {
 }
 
 #agendar-btn {
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #d4af37;
     color: white;
     border: none;
@@ -989,13 +989,15 @@ h1 {
     font-size: 16px;
     align-items: center;
     margin-left: 0%;
+    margin-bottom: -20%;
     color: #000000;
     
     
 }
 
+
 #mensagem {
-    margin-top: 20px;
+    margin-top: 20%;
     font-size: 18px;
 }
 
@@ -1088,6 +1090,7 @@ h1 {
   footer {
     background-color: #e6e6e6;
     padding: 50px 0;
+    margin-top: 2%;
 }
 
 .container-footer {

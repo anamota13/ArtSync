@@ -127,7 +127,7 @@ try {
             const horariosContainer = document.getElementById('horarios-container');
             horariosContainer.innerHTML = '';
             const horariosDiv = document.getElementById('horarios');
-            horariosDiv.classList.add('show'); // Adiciona a classe para mostrar
+            horariosDiv.classList.add('show'); 
 
             const availableTimes = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00'];
 
@@ -214,7 +214,7 @@ try {
                         </form>
                     </div>                    
                     <div class="contact-section">
-                        <p><i class="fa fa-clock"></i> Das 08:00 às 21:00</p>
+                        <p><i class="fa fa-clock"></i> Das 08:00 às 18:00</p>
                         <p><i class="fa fa-phone"></i> +55 16 99297-1607</p>
                     </div>
     
