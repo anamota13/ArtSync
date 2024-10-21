@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->addAddress($emailUsuario);  
 
                 $mail->isHTML(true);
-                $mail->Subject = 'Confirmação de Agendamento';
+                $mail->Subject = 'Agendamento - ArtSync';
                 $mail->Body = "
                     <h2>Confirmação do Seu Agendamento na Galerie Belle Époque</h2>
                     <p>Olá, <strong>{$_SESSION['nome_usuario']}</strong>!</p>
