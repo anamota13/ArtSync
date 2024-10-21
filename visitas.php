@@ -39,6 +39,7 @@ try {
 <section class="corpo">
 <p>&nbsp &nbsp &nbsp Bem-vindo! Aqui, você pode agendar sua visita às nossas exposições. Escolha um dia no calendário e selecione um horário disponível. Horários reservados estarão destacados em cinza. <br> 
 &nbsp &nbsp &nbsp &nbspEstamos ansiosos para recebê-lo! Lembre-se de que é necessário estar logado para agendar sua visita.</p>
+<p><strong>&nbsp &nbsp &nbsp &nbspLembre-se:</strong> Por questões de segurança, ao clicar em AGENDAR, aguarde cerca de 5 segundos.</p>
 </section>
 
 
@@ -205,7 +206,6 @@ try {
     
                     <div class="social-icons">
                         <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:contato@na.na"><i class="fas fa-envelope"></i></a>
                     </div>
     
                     <div class="maps">

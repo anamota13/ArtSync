@@ -178,7 +178,6 @@ session_start(); // Inicia a sessão
     
                     <div class="social-icons">
                         <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:contato@na.na"><i class="fas fa-envelope"></i></a>
                     </div>
     
                     <div class="maps">

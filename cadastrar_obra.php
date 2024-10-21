@@ -48,36 +48,5 @@ session_start();
             <button type="submit">Cadastrar Obra</button>
         </form>
     </div>
-
-    <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-                <div class="footer-col footer-logo"> 
-                    <img src="logo.png" alt="artsync">
-                </div>
-                <div class="footer-col">
-                    <h4><b>INSCREVA-SE PARA RECEBER NOSSO NEWSLETTER</b></h4>
-                    <div class="form-sub">
-                        <form id="newsletter-form">
-                            <input type="email" placeholder="Digite o seu e-mail" required>
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </div>
-                    <div class="contact-section">
-                        <p><i class="fa fa-clock"></i> Das 08:00 às 21:00</p>
-                        <p><i class="fa fa-phone"></i> +55 16 99344-2527</p>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:contato@na.na"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="maps">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.788034016978!2d-47.403269224983326!3d-20.514913781008914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b0a650b93c4b5f%3A0xbe0e42f3aa42525c!2sFatec%20Franca%20-%20Faculdade%20de%20Tecnologia%20de%20Franca%20Dr%20Thomaz%20Novelino!5e0!3m2!1spt-BR!2sbr!4v1727284305686!5m2!1spt-BR!2sbr" 
-                                width="500vh" height="250vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

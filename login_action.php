@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 
 $conn = new mysqli("localhost", "root", "", "artsync_pi");
 
@@ -19,20 +19,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        
+
         if (password_verify($senha, $row['senha'])) {
-            $_SESSION['nome_usuario'] = $row['nome_usuario']; 
-            $_SESSION['tipo'] = $row['tipo']; 
-            $_SESSION['logged_in'] = true; 
-            header("Location: index.php"); 
-            exit(); 
+            $_SESSION['nome_usuario'] = $row['nome_usuario'];
+            $_SESSION['tipo'] = $row['tipo'];
+            $_SESSION['logged_in'] = true;
+            $_SESSION['email'] = $row['email'];  
+
+            header("Location: index.php");
+            exit();
         } else {
-            header("Location: login.html?error=senha_incorreta"); 
-            exit(); 
+            header("Location: login.html?error=senha_incorreta");
+            exit();
         }
     } else {
-        header("Location: login.html?error=usuario_nao_encontrado"); 
-        exit(); 
+        header("Location: login.html?error=usuario_nao_encontrado");
+        exit();
     }
 
     $stmt->close();
