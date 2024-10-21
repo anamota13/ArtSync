@@ -66,7 +66,7 @@ session_start();
                     </div>
     
                     <div class="social-icons">
-                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/artsync_system/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
     
                     <div class="maps">

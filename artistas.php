@@ -18,10 +18,10 @@ session_start(); // Inicia a sessão
         <img src="logo.png" alt="Logo">
     </div>
     <?php
-    include('header.php'); // Inclui o cabeçalho
+    include('header.php'); 
     ?>
 
-<!-- Carregando o arquivo JavaScript -->
+
 <script src="scripts.js"></script>
 
 
@@ -177,7 +177,7 @@ session_start(); // Inicia a sessão
                     </div>
     
                     <div class="social-icons">
-                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/artsync_system/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
     
                     <div class="maps">

@@ -659,13 +659,13 @@ h1 {
 
 .linha-vertical2 {
     position: absolute;
-    left: 50%; /* Centraliza a linha vertical */
+    left: 50%; 
     top: 13%;
     bottom: 0;
     width: 4px; 
     height: 80%;
     background-color: #d4af37; 
-    margin-left: -2%; /* Para centralizar a linha */
+    margin-left: -2%; 
 }
 
 .texto-banner2 {
@@ -675,8 +675,9 @@ h1 {
     color: #1a1919;         
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;   
-    margin-left: 8%; /* Espaço entre a imagem e o texto */
-    margin-top: 5%;
+    margin-left: 8%; 
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .texto-banner2 p {
@@ -703,7 +704,7 @@ h1 {
 }
 
 .texto-banner2 button:hover {
-    background-color: #b59428; /* Alterando a cor ao passar o mouse */
+    background-color: #b59428; 
     transform: scale(1.05); /* Aumenta o tamanho do botão ao passar o mouse */
     box-shadow: 0 6px 12px rgba(71, 71, 71, 0.3); /* Sombra mais forte */
 }
@@ -723,7 +724,7 @@ h1 {
     }
 
     .linha-vertical2 {
-        display: none; /* Esconde a linha vertical em telas menores se necessário */
+        display: none; 
     }
 }
 
