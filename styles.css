@@ -306,6 +306,18 @@ h1 {
     background-color: #b88a2f;
 }
 
+.voltar {
+    text-align: left; 
+    color: #333; 
+    font-size: 14px; 
+    text-decoration: none;
+    margin-top: 2%;
+}
+
+.voltar a {
+    text-decoration: none;
+}
+
 /* Logout */
 
 .user-menu {
@@ -800,12 +812,12 @@ h1 {
     background-color: #e6e6e6; 
     padding: 20px;
     border-radius: 8px;
-    width: 100%; /* Largura total */
-    max-width: 600px; /* Largura máxima aumentada */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-    margin-bottom: 8%;
-    margin-top: 4%;
+    width: 100%; 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
     
 }
 
@@ -1375,4 +1387,16 @@ h1 {
         font-size: 16px; 
     }
     
+}
+
+.info {
+    font-size: 11px;
+    margin-top: 5%;
+    position: fixed; 
+    bottom: 0;
+    right: 0; 
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    width: auto; 
+    text-align: right; 
 }

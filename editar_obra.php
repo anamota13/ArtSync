@@ -69,8 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="logo">
         <img src="logo.png" alt="Logo">
     </div>
-    
-    <?php include('header.php'); ?>
 
     <div class="collection-container"> 
         <h1>Editar Obra</h1>
@@ -93,32 +91,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Salvar Alterações</button>
         </form>
     </div>
-
-    <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-                <div class="footer-col footer-logo"> 
-                    <img src="logo.png" alt="artsync">
-                </div>
-                <div class="footer-col">
-                    <h4><b>INSCREVA-SE PARA RECEBER NOSSO NEWSLETTER</b></h4>
-                    <div class="form-sub">
-                        <form id="newsletter-form">
-                            <input type="email" placeholder="Digite o seu e-mail" required>
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </div>
-                    <div class="contact-section">
-                        <p><i class="fa fa-clock"></i> Das 08:00 às 21:00</p>
-                        <p><i class="fa fa-phone"></i> +55 16 99344-2527</p>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:contato@na.na"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
