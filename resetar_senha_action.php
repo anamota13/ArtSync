@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
                 $mail->setFrom('equipeartsync@gmail.com', 'Equipe ArtSync');
                 $mail->addAddress($email);
 
-                $resetLink = "http://localhost/ArtSync/ArtSync/resetar_senha_form.php";
+                $resetLink = "http://localhost/ArtSync/ArtSync/resetar_senha_form.php?token=$token";
 
 
                 $mail->isHTML(true);

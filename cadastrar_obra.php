@@ -17,10 +17,6 @@ session_start();
     <div class="logo">
         <img src="logo.png" alt="Logo">
     </div>
-    <?php
-    include('header.php'); 
-    ?>
-
 
 <script src="scripts.js"></script>
 

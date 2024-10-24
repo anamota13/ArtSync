@@ -147,13 +147,13 @@ nav ul li a.login-button:hover {
 /* H1 */
 .corpo h1 {
     text-align: center;
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 /* H2 */
 .corpo h2 {
     margin-top: 20px;
-    margin-left: 20%;
+    margin-left: 15%;
     font-size: 17px;
 }
 
@@ -167,9 +167,11 @@ nav ul li a.login-button:hover {
 /* Parágrafos */
 .corpo p {
     font-size: 16px;
-    margin-left: 20%;
+    margin-left: 15%;
     margin-top: 20px;
     line-height: 1.75;
+    
+    
 }
 
 /* Imagens */
@@ -542,11 +544,11 @@ h1 {
 /* Centraliza a grid e ajusta o tamanho */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    gap: 15px; /* Espaçamento entre as divs */
-    margin: 0 auto; /* Remove a margem superior e centraliza o grid */
-    padding: 0 10%; /* Adiciona margem de 15% nas laterais */
-    max-width: 1200px; /* Limita a largura máxima do grid */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    margin: 0 auto;
+    padding: 0 10%; 
+    max-width: 1200px; 
 }
 
 .principais-artistas {
@@ -592,15 +594,15 @@ h1 {
 /* Responsividade para telas menores */
 @media (max-width: 1024px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
-        padding: 0 10%; /* Reduz as margens laterais em telas médias */
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 0 10%;
     }
 }
 
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
-        padding: 0 5%; /* Margens menores em telas pequenas */
+        grid-template-columns: 1fr; 
+        padding: 0 5%; 
     }
 
     .container {
@@ -614,8 +616,8 @@ h1 {
 
 @media (max-width: 480px) {
     .grid-container {
-        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
-        gap: 10px; /* Menor espaçamento entre as divs */
+        grid-template-columns: 1fr; 
+        gap: 10px; 
     }
 
     .principais-artistas .divs {
@@ -644,9 +646,9 @@ h1 {
 /* Tela Coleção */
 
 .colecao-wrapper {
-    max-width: 1200px; /* Largura máxima da div */
-    margin: 0 auto; /* Centraliza a div */
-    padding: 20px; /* Espaçamento interno */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
 }
 
 .colecao-section {
@@ -654,17 +656,17 @@ h1 {
     flex-direction: row;
     align-items: center;
     position: relative;
-    flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha */
+    flex-wrap: wrap; 
 }
 
 .colecao {
-    flex: 1; /* Faz a imagem ocupar o espaço disponível */
-    min-width: 300px; /* Largura mínima para a imagem */
+    flex: 1; 
+    min-width: 300px; 
 }
 
 .colecao img {
-    width: 115%; /* A imagem se ajusta ao tamanho do contêiner */
-    height: 60vh; /* Mantém a proporção da imagem */
+    width: 115%; 
+    height: 60vh; 
     margin-top: 5%;
     margin-left: -18%;
 }
@@ -712,27 +714,27 @@ h1 {
     font-weight: bold; 
     transition: background-color 0.3s ease, transform 0.3s ease; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    border: none; /* Removendo a borda */
+    border: none; 
 }
 
 .texto-banner2 button:hover {
     background-color: #b59428; 
-    transform: scale(1.05); /* Aumenta o tamanho do botão ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(71, 71, 71, 0.3); /* Sombra mais forte */
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(71, 71, 71, 0.3); 
 }
 
 .texto-banner2 button:active {
-    transform: scale(0.95); /* Reduz o tamanho ao clicar */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao clicar */
+    transform: scale(0.95); 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
 }
 
 @media (max-width: 768px) {
     .texto-banner2 {
-        font-size: 30px; /* Tamanho da fonte em telas menores */
+        font-size: 30px; 
     }
 
     .texto-banner2 p {
-        font-size: 20px; /* Tamanho do texto do parágrafo em telas menores */
+        font-size: 20px; 
     }
 
     .linha-vertical2 {
@@ -741,19 +743,17 @@ h1 {
 }
 
 /* Ajustando o local das obras */
-
-/* Estilizando a lista de obras */
 .obras-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
-    gap: 30px; /* Espaçamento entre as obras */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
     margin: 30px 0;
 }
 
 /* Estilo para cada obra */
 .obra-item {
     display: flex;
-    flex-direction: column; /* Empilha imagem e texto em telas pequenas */
+    flex-direction: column; 
     background-color: #ffffff; 
     padding: 20px;
     border-radius: 12px;
@@ -769,19 +769,19 @@ h1 {
 .obra-imagem {
     width: 100%;
     height: 60%;
-    object-fit: cover; /* Mantém o aspecto da imagem */
+    object-fit: cover; 
     border-radius: 12px;
     margin-bottom: 15px;
 }
 
 /* Informações da obra */
 .obra-info {
-    text-align: left;
+    text-align: justify;
 }
 
 .obra-titulo {
     font-size: 1.5rem;
-    color: #b59428; /* Cor dourada */
+    color: #b59428; 
     margin-bottom: 10px;
 }
 
@@ -798,7 +798,7 @@ h1 {
 /* Responsividade */
 @media (max-width: 768px) {
     .obras-list {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr; 
     }
 
     .obra-imagem {
@@ -813,13 +813,13 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     width: 100%; 
-    max-width: 600px; 
+    max-width: 900px; 
     margin-left: auto; 
     margin-right: auto;
-    margin-bottom: auto;
+    margin-bottom: 5%;
     margin-top: auto;
-    
 }
+
 
 .collection-form {
     display: flex;

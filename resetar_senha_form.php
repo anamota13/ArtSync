@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir Senha</title>
     <link rel="stylesheet" href="styles.css">
+
     <script>
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
-            const token = params.get('token');
+            const token = params.get('token');  
 
-            
-            if (!token) {
+            console.log("Token capturado:", token);  
+
+            if (!token || token.trim() === "") {
                 alert("Token ausente ou inválido!");
-                window.location.href = "login.html";
+                window.location.href = "login.html";  
                 return;
             }
 
-            
-            document.getElementById('tokenInput').value = token;
+            document.getElementById('tokenInput').value = token;  
         };
     </script>
 </head>
