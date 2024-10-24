@@ -2,8 +2,9 @@
 
 # ArtSync: Sistema Web Integrado de Gestão para Museus e Galerias de Arte
 
-<div style="text-align: justify;">
+
 &nbsp;&nbsp;&nbsp;&nbsp; O **ArtSync** é uma plataforma inovadora desenvolvida para facilitar o gerenciamento de coleções de arte em museus e galerias. O sistema foi projetado para **organizar**, **administrar** e **divulgar** obras de arte de maneira eficiente, permitindo que tanto curadores quanto visitantes tenham uma experiência fluida e acessível. Além disso, o ArtSync promove a **democratização do acesso à arte** ao disponibilizar as coleções online, conectando pessoas e culturas.
+
 
 ## **Sumário**
 1. Principais Funcionalidades
@@ -64,4 +65,6 @@
 
 - MUCHACHO, Rute. Museus virtuais: A importância da usabilidade na mediação entre o público e o objecto museológico. SOPCOM: Associação Portuguesa de Ciências da Comunicação, p. 1540-1547, 2005. [Leia o artigo aqui.](https://arquivo.bocc.ubi.pt/pag/muchacho-rute-museus-virtuais-importancia-usabilidade-mediacao.pdf)
 - TEIXERA, A.; TRAVAGLIA, Z. Desvalorização da arte na sociedade atual. Convenit Internacional, v. 31, p. 169-176, 2019. [Leia o artigo aqui.](http://www.hottopos.com/convenit31/169-176Amanda.pdf)
-</div>
+
+
+
