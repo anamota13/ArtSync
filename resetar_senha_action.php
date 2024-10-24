@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
             $stmt = $conn->prepare("INSERT INTO reset_senha (email, token, expiracao) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $email, $token, $expiracao);
             $stmt->execute();
-
+ 
             $mail = new PHPMailer(true); 
 
             try {
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
                 $mail->setFrom('equipeartsync@gmail.com', 'Equipe ArtSync');
                 $mail->addAddress($email);
 
-                $resetLink = "http://localhost/ArtSync/ArtSync/resetar_senha_form.html";
+                $resetLink = "http://localhost/ArtSync/ArtSync/resetar_senha_form.php";
 
 
                 $mail->isHTML(true);

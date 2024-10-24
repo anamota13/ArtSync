@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir Senha</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script>
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
-            const error = params.get('error');
+            const token = params.get('token');
 
-            if (error === 'token_invalido') {
-                alert("O token fornecido é inválido ou expirou.");
+            
+            if (!token) {
+                alert("Token ausente ou inválido!");
+                window.location.href = "login.html";
+                return;
             }
-        }
+
+            
+            document.getElementById('tokenInput').value = token;
+        };
     </script>
 </head>
-<body> 
+<body>
     <div class="logo">
         <img src="logo.png" alt="Logo">
-    </div>  
-    <div class="login-container"> 
+    </div>
+    <div class="login-container">
         <h1>Redefinir Senha</h1>
-        <form class="login-form" id="resetForm" action="reset_update.php" method="post">
-            <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']); ?>">
+        <form class="login-form" action="reset_update.php" method="post">
+            <input type="hidden" id="tokenInput" name="token">
+
             <label for="senha">Nova Senha</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua nova senha" required>
             <button type="submit">Redefinir</button>
         </form>
         <div class="back-to-login">
-            <p class="register-prompt"><br> Lembrou sua senha? <a href="login.html">Faça login</a></p>
+            <p><br> Lembrou sua senha? <a href="login.html">Faça login</a></p>
         </div>
     </div>
 </body>
