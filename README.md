@@ -7,27 +7,65 @@
 
 
 ## **Sumário**
-- <a href="#funcionalidades-principais" style="text-decoration: none;">Principais Funcionalidades</a>
-- <a href="#tecnologias-utilizadas" style="text-decoration: none;">Tecnologias Utilizadas</a>
-- <a href="#objetivo-do-projeto" style="text-decoration: none;">Objetivo do Projeto</a>
-- <a href="#prototipagem" style="text-decoration: none;">Prototipagem</a>
-- <a href="#artigos" style="text-decoration: none;">Artigos e Referência</a>
+1. Principais Funcionalidades
+2. Tecnologias Utilizadas
+3. Objetivo do Projeto
+4. Prototipagem
+5. Artigos e Referência
 
-## ⚙️ Funcionalidades
+## ⚙️ Funcionalidades  
 
-### Para Usuários Não Logados
-- **Visualização de Coleções**: Usuários podem explorar as coleções disponíveis online, permitindo que conheçam as obras de arte e as exposições.
-- **Recebimento de Newsletter**: Interessados podem se inscrever para receber atualizações e novidades sobre o ArtSync e as coleções.
+#### Para Usuários Não Logados  
+- **Visualização de Coleções**: Permite explorar online as coleções e exposições, oferecendo um primeiro contato com as obras disponíveis.  
+- **Recebimento de Newsletter**: Interessados podem se inscrever para receber atualizações e novidades sobre o ArtSync e as coleções.  
 
-### Para Usuários Logados
-- **Agendamento de Visitas**: Usuários logados podem agendar suas visitas online a museus ou galerias, selecionando datas e horários disponíveis.
-- **Notificações de Agendamento**: Após agendar uma visita, os usuários recebem notificações por e-mail, garantindo que os detalhes fiquem registrados em sua agenda.
-- **Visualização de Coleções**: Usuários podem explorar as coleções disponíveis online, permitindo que conheçam as obras de arte e as exposições.
-- **Recebimento de Newsletter**: Interessados podem se inscrever para receber atualizações e novidades sobre o ArtSync e as coleções.
+#### Para Usuários Logados  
+- **Agendamento de Visitas**: Usuários podem agendar visitas a museus ou galerias, escolhendo datas e horários disponíveis.  
+- **Notificações de Agendamento**: Após o agendamento, o usuário recebe uma notificação por e-mail com os detalhes da visita.  
+- **Visualização de Coleções**: Acesso às mesmas coleções e exposições disponíveis para usuários não logados.  
+- **Recebimento de Newsletter**: Continuação do recebimento de novidades e atualizações via e-mail.  
 
-### Para Administradores
-- **Gerenciamento Completo de Obras**: Administradores podem cadastrar, editar e excluir obras de arte no sistema, garantindo que as informações estejam sempre atualizadas.
-- **Acesso a Relatórios e Estatísticas**: Possibilidade de gerar relatórios sobre agendamentos, feedback dos usuários e desempenho das exposições através da análise dos agendamentos.
-- **Comunicação com Usuários**: Administradores (Equipe ArtSync) podem enviar comunicados e novidades para usuários logados, promovendo eventos e atualizações.
+#### Para Administradores  
+&nbsp;&nbsp;&nbsp;&nbsp; Além de todas as funcionalidades mencionadas, os administradores têm acesso a:  
+- **Gerenciamento de Obras**: Permite cadastrar, editar e excluir obras de arte com facilidade, garantindo que o acervo esteja sempre atualizado e organizado. Essa funcionalidade melhora a curadoria e facilita a exposição de novos itens. Com essa organização, os administradores podem controlar as estatísticas relacionadas às visitas, assegurando uma análise precisa do desempenho e visibilidade.
 
-Essas funcionalidades tornam o ArtSync uma plataforma robusta e acessível, atendendo tanto as necessidades dos visitantes quanto dos administradores.
+#### Notificações Automatizadas: Envio de e-mails com confirmações de agendamento e atualizações. 
+
+## 👨🏻‍💻 Tecnologias Utilizadas
+
+- **HTML**: Estruturação do conteúdo da página, permitindo uma base sólida para a interface.
+- **CSS**: Estilização da interface, garantindo um design atraente e responsivo.
+- **JavaScript**: Interatividade no frontend, como calendários dinâmicos e manipulação de eventos do usuário.
+- **PHP**: Linguagem de script do lado do servidor, utilizada para a lógica de backend, incluindo o gerenciamento de sessões, autenticação de usuários e comunicação com o banco de dados.
+- **MySQL**: Banco de dados relacional utilizado para armazenar informações sobre obras de arte, usuários e agendamentos, permitindo consultas eficientes e integridade dos dados.
+- **XAMPP**: Ambiente de desenvolvimento local que facilita a configuração e execução do projeto sem a necessidade de instalação separada de cada componente.
+- **PHPMailer**: Biblioteca PHP utilizada para o envio de e-mails, garantindo comunicação eficaz com os usuários, como confirmações de agendamentos e newsletters.
+
+
+## 🎯 Objetivo do Projeto
+
+&nbsp;&nbsp;&nbsp;&nbsp; O objetivo do **ArtSync** é revolucionar a forma como museus e galerias gerenciam suas coleções e interagem com os visitantes. A plataforma busca democratizar o acesso à arte, permitindo que usuários de diferentes origens e locais explorem exposições e obras de arte de forma online e intuitiva.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Com a implementação de funcionalidades como agendamento de visitas, notificações automatizadas e gerenciamento eficiente de obras, o ArtSync visa:
+
+- **Facilitar a Gestão Cultural**: Proporcionar uma ferramenta robusta para administradores e curadores, permitindo uma gestão mais organizada e eficiente das coleções e exposições.
+- **Aumentar a Visibilidade das Obras**: Tornar as coleções acessíveis a um público mais amplo, independentemente da localização física dos museus e galerias.
+- **Promover a Interação do Usuário**: Criar uma experiência de usuário envolvente e dinâmica, incentivando os visitantes a se conectarem mais profundamente com as obras de arte e as instituições culturais.
+- **Automatizar Processos**: Reduzir a carga administrativa por meio da automação de tarefas como agendamentos e comunicação com os usuários, resultando em economias operacionais significativas.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Dessa forma, o ArtSync não apenas otimiza a operação das instituições culturais, mas também contribui para uma maior valorização da arte e uma experiência enriquecedora para todos os envolvidos.
+
+## 📚 Artigos e Referências
+
+&nbsp;&nbsp;&nbsp;&nbsp; Para embasamento teórico, foi utilizado o artigo de Rute Muchacho, que aborda como "os novos media e, em particular, a internet são um instrumento precioso no processo de comunicação entre o museu e o seu público. A sua utilização como complemento do espaço físico do museu vem facilitar a transmissão da mensagem pretendida e captar a atenção do visitante, possibilitando uma nova visão do objeto museológico" (Muchacho, 2024). Essa perspectiva reforça a importância de um sistema digital como o ArtSync para aprimorar a interação entre museus e seus públicos.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Além disso, foi referenciado o trabalho de Teixeira e Travaglia (2019), que destaca a importância da arte na construção da identidade e da cultura de uma sociedade. Eles afirmam: "Arte e sociedade sempre estiveram intrinsecamente unidas. Nas artes dão-se expressões das diferentes culturas, de sentimentos e emoções, de hábitos de uma civilização, de mensagens, do humano. Sem ela, não conseguiríamos formar nossa própria identidade e não teríamos desenvolvido nossa capacidade de criar." (p. 169)
+
+#### ▶️ Referências
+
+- MUCHACHO, Rute. Museus virtuais: A importância da usabilidade na mediação entre o público e o objecto museológico. SOPCOM: Associação Portuguesa de Ciências da Comunicação, p. 1540-1547, 2005. [Leia o artigo aqui.](https://arquivo.bocc.ubi.pt/pag/muchacho-rute-museus-virtuais-importancia-usabilidade-mediacao.pdf)
+- TEIXERA, A.; TRAVAGLIA, Z. Desvalorização da arte na sociedade atual. Convenit Internacional, v. 31, p. 169-176, 2019. [Leia o artigo aqui.](http://www.hottopos.com/convenit31/169-176Amanda.pdf)
+
+
+
+
