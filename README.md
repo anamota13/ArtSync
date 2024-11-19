@@ -119,6 +119,13 @@ Atente-se ao guia caso queira configurar o sistema localmente usando **XAMPP** e
 - Verifique as permissões de acesso ao banco de dados. Se necessário, crie um usuário específico para o sistema.
 - Mantenha os arquivos de configuração com permissões adequadas para evitar problemas de segurança.
 
+## Prototipação
+
+&nbsp;&nbsp;&nbsp;&nbsp; Segue abaixo o link da prototipação. A mesma está presente na documentação do projeto (disponível no repositório):
+
+
+- [Clique para visualizar a prototipação](https://www.canva.com/design/DAGNsaZ0TJg/lMDeoZzjsb9QgRgqElndow/view?utm_content=DAGNsaZ0TJg&utm_campaign=designshare&utm_medium=link&utm_source=editor).
+
 
 ## 📚 Artigos e Referências
 
