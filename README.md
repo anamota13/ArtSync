@@ -59,7 +59,7 @@
 
 ## 🔧 Configuração do Sistema (Rodar Local)
 
-Este guia explica como configurar o sistema localmente usando **XAMPP** e os recursos fornecidos no repositório.
+Atente-se ao guia caso queira configurar o sistema localmente usando **XAMPP** e os recursos fornecidos no repositório.
 
 ---
 
