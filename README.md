@@ -10,8 +10,9 @@
 1. Principais Funcionalidades
 2. Tecnologias Utilizadas
 3. Objetivo do Projeto
-4. Prototipagem
-5. Artigos e Referência
+4. Configurações para rodar localmente
+5. Prototipagem
+6. Artigos e Referência
 
 ## ⚙️ Funcionalidades  
 
@@ -54,6 +55,70 @@
 - **Automatizar Processos**: Reduzir a carga administrativa por meio da automação de tarefas como agendamentos e comunicação com os usuários, resultando em economias operacionais significativas.
 
 &nbsp;&nbsp;&nbsp;&nbsp; Dessa forma, o ArtSync não apenas otimiza a operação das instituições culturais, mas também contribui para uma maior valorização da arte e uma experiência enriquecedora para todos os envolvidos.
+
+
+## 🔧 Configuração do Sistema (Rodar Local)
+
+Este guia explica como configurar o sistema localmente usando **XAMPP** e os recursos fornecidos no repositório.
+
+---
+
+## 🛠️ **Requisitos**
+
+- [Baixe e instale o XAMPP](https://www.apachefriends.org)
+- Arquivo `.sql` com o esquema do banco de dados (disponível no repositório)
+- Biblioteca **PHPMailer** (disponível no repositório)
+
+---
+
+## 🚀 **Passos para Configurar o Sistema**
+
+### 1️⃣ **Instalação e Inicialização do XAMPP**
+1. Baixe e instale o [XAMPP](https://www.apachefriends.org).
+2. Abra o **Painel de Controle do XAMPP**.
+3. Inicie os serviços **Apache** e **MySQL** clicando em **Start**.
+
+---
+
+### 2️⃣ **Configuração do Banco de Dados**
+1. Acesse o [phpMyAdmin](http://localhost/phpmyadmin).
+2. Clique na aba **Importar**.
+3. Selecione o arquivo `.sql` do banco de dados localizado no repositório.
+4. Clique em **Executar** para importar o esquema do banco.
+
+---
+
+### 3️⃣ **Configuração do PHPMailer**
+1. Copie a pasta `PHPMailer` do repositório para o diretório raiz do sistema no servidor local (ex.: `htdocs`).
+2. Edite o arquivo `agendar.action`, `newsletter.action` e `resetar_senha_action.php`:
+- Configure as credenciais do e-mail (usuário, senha, e servidor SMTP).
+- Exemplo:
+  ```php
+  $mail->Host = 'smtp.exemplo.com';
+  $mail->Username = 'seu_email@exemplo.com';
+  $mail->Password = 'sua_senha';
+  ```
+
+---
+
+### 4️⃣ **Configuração do Sistema**
+1. **Se necessário**, edite os arquivo que possuem a conexão com o banco (ex: db.php) no diretório do sistema:
+- Configure as credenciais de acesso ao banco de dados:
+  ```php
+  $host = 'localhost';
+  $user = 'root';
+  $password = '';
+  $database = 'artsync_pi';
+  ```
+2. Salve o arquivo e teste a conexão ao banco.
+
+---
+
+## 📝 **Observações**
+- Certifique-se de que o serviço **MySQL** está em execução no XAMPP antes de acessar o banco de dados.
+- Verifique as permissões de acesso ao banco de dados. Se necessário, crie um usuário específico para o sistema.
+- Mantenha os arquivos de configuração com permissões adequadas para evitar problemas de segurança.
+
 
 ## 📚 Artigos e Referências
 
