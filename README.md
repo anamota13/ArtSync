@@ -12,7 +12,8 @@
 3. Objetivo do Projeto
 4. Configurações para rodar localmente
 5. Prototipagem
-6. Artigos e Referência
+6. Elevator Pitch
+7. Artigos e Referência
 
 ## ⚙️ Funcionalidades  
 
@@ -132,6 +133,10 @@ Atente-se ao guia caso queira configurar o sistema localmente usando **XAMPP** e
 &nbsp;&nbsp;&nbsp;&nbsp; Para embasamento teórico, foi utilizado o artigo de Rute Muchacho, que aborda como "os novos media e, em particular, a internet são um instrumento precioso no processo de comunicação entre o museu e o seu público. A sua utilização como complemento do espaço físico do museu vem facilitar a transmissão da mensagem pretendida e captar a atenção do visitante, possibilitando uma nova visão do objeto museológico" (Muchacho, 2024). Essa perspectiva reforça a importância de um sistema digital como o ArtSync para aprimorar a interação entre museus e seus públicos.
 
 &nbsp;&nbsp;&nbsp;&nbsp; Além disso, foi referenciado o trabalho de Teixeira e Travaglia (2019), que destaca a importância da arte na construção da identidade e da cultura de uma sociedade. Eles afirmam: "Arte e sociedade sempre estiveram intrinsecamente unidas. Nas artes dão-se expressões das diferentes culturas, de sentimentos e emoções, de hábitos de uma civilização, de mensagens, do humano. Sem ela, não conseguiríamos formar nossa própria identidade e não teríamos desenvolvido nossa capacidade de criar." (p. 169)
+
+## Elevator Pitch
+
+&nbsp;&nbsp;&nbsp;&nbsp [Veja o Elevator Pitch do ArtSync](https://youtu.be/-rTHtV49ECA?feature=shared).
 
 #### ▶️ Referências
 
