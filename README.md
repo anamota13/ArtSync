@@ -136,7 +136,7 @@ Atente-se ao guia caso queira configurar o sistema localmente usando **XAMPP** e
 
 ## Elevator Pitch
 
-&nbsp;&nbsp;&nbsp;&nbsp [Veja o Elevator Pitch do ArtSync](https://youtu.be/-rTHtV49ECA?feature=shared).
+&nbsp;&nbsp;&nbsp;&nbsp; [Veja o Elevator Pitch do ArtSync](https://youtu.be/-rTHtV49ECA?feature=shared).
 
 #### ▶️ Referências
 
